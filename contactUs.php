@@ -1,0 +1,1 @@
+Split into two pages and alter men for Suggest Restaurant and Feedback
