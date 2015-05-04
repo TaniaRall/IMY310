@@ -1,7 +1,7 @@
+<?php require_once('connection.php'); ?>
 <form method="get" action="results.php">
 	<label for="Price">Price:</label>
 	<br/>
-	
 	<select id="Price" name="price">
 		<?php
 			$result = mysqli_query($conn, "SELECT * FROM prices"); 

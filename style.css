@@ -44,16 +44,20 @@ li
 
 #information
 {
-	width: 200px;
-	height: 450px;
-	left: 250px;
-	top: -370px;
+	//width: 200px;
+	//height: 450px;
+	//left: 250px;
+	//top: 0px;//-370px;
 }
 
 .result
 {
 	width: 450px;
 	//height: 100px;
+	cursor: pointer;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
 }
 
 .memberImage
