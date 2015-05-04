@@ -11,7 +11,7 @@
 			<?php include "baconFinder.php"; ?>
 		</div>
 		<div id="content">
-			<?php include "searchIframe.php"; ?>
+			<?php include "resultsIframe.php"; ?>
 		</div>
 	</body>
 </html>
