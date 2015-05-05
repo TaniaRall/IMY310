@@ -119,6 +119,7 @@ INSERT INTO `food_link` (`restaurant`, `food_type`) VALUES
 (5, 4),
 (5, 7),
 (5, 12),
+(5, 9),
 (6, 3),
 (6, 5),
 (6, 17),
