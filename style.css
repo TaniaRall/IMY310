@@ -105,3 +105,11 @@ li
 #nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
     background:#333;
 }
+
+.label {
+    font-weight: bold;
+}
+
+.label::after {
+content:":"
+}
