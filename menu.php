@@ -24,3 +24,20 @@
 		</li>
 	</ul>
 </div>
+
+<?php
+function formatResult($value) {
+    echo("<div class='result'>
+            <a href='detailedResultChangePage.php?id=$value[restaurant_id]'>
+                <img class='logo' src='logos/$value[logoPath]' alt='$value[Name] Logo' />
+            </a>
+            <div class='rest-name'>
+                $value[Name]
+            </div>
+            <div class='address'>
+                $value[address]
+            </div>
+        </div>");
+    /* <div class="small-details"><span class='label'>Name</span>  echo($value['Name']); ?> <br>
+         <span class='label'>Price-Range</span> echo($value['price_category']); </div>*/
+}?>
