@@ -1,6 +1,6 @@
 <?php require_once('connection.php'); ?>
 <form method="get" action="results.php">
-	<label for="Price">Price:</label>
+	<label for="Price">Maximum Price Range</label>
 	<br/>
 	<select id="Price" name="price">
 		<?php
@@ -14,7 +14,7 @@
 	</select>
 	<br/>
 	<br/>
-	<label for="FoodType">Food Type:</label>
+	<label for="FoodType">Food Type</label>
 	<br/>
 	<select id="FoodType" name="food">
 		<?php
@@ -28,7 +28,7 @@
 	</select>
 	<br/>
 	<br/>
-	<label for="Venue">Venue:</label>
+	<label for="Venue">Venue</label>
 	<br/>
 	<select id="Venue" name="venue">
 		<?php
@@ -43,4 +43,4 @@
 	<br/>
 	<br/>
 	<input id="submitSearch" type="submit" vaue="Submit"/>
-</from>
+</form>

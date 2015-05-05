@@ -52,12 +52,11 @@ li
 
 .result
 {
-	width: 450px;
-	//height: 100px;
+	width: 230px;
+    height: 230px;
+
 	cursor: pointer;
-	border: 1px;
-	border-color: black;
-	border-style: solid;
+    border: 1px solid black;
 }
 
 .memberImage
@@ -77,7 +76,6 @@ li
 	height: 50px;
 }
 
-/*--- DROPDOWN ---*/
 #nav ul{
     background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
     background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
@@ -110,6 +108,17 @@ li
     font-weight: bold;
 }
 
-.label::after {
+.label:after {
 content:":"
+}
+
+.detail-logo {
+    width: 300px;
+    margin: auto;
+    clear: both;
+}
+
+.logo {
+    width: 80%;
+    margin: auto;
 }

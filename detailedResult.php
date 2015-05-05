@@ -1,6 +1,6 @@
 <div id="information">
     <?php $apiKey = "AIzaSyDk9GnS9P2LscHZBJ5AdsgSB_mmQDfTEr8";
-    $id = $_GET['Name'];
+    $id = $_GET['id'];
 
     $result = mysqli_query($conn, "SELECT * FROM restaurants
           INNER JOIN venue_link on venue_link.restaurant = restaurant_id
@@ -10,17 +10,14 @@
           WHERE restaurant_id = $id
           GROUP BY restaurant_id");
 
-    $ans = mysqli_fetch_assoc($result);
-    $src = "https://www.google.com/maps/embed/v1/place?key=".$apiKey."&q=".urlencode($ans["Name"].",".$ans['address']);
+    $value = mysqli_fetch_assoc($result);
+    $src = "https://www.google.com/maps/embed/v1/place?key=".$apiKey."&q=".urlencode($value["Name"].",". $value['address']);
     ?>
 
-    <?php echo("<iframe id='googleMap' src='$src'></iframe>"); ?>
-
-
     <?php
-    $value = $ans;
 
-    echo("<img class='logo' width='150' height='150' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' />")
+    echo("<img class='detail-logo' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' />");
+    echo("<iframe id='googleMap' src='$src'></iframe>");
     ?>
     <div class="rest-name"><span class="label">Name</span> <?php echo($value['Name']); ?> </div>
     <div class="dresscode"><span class="label">Dress code</span> <?php echo($value['Dresscode']); ?></div>
@@ -41,7 +38,7 @@
     <?php
     $result = mysqli_query($conn, "SELECT DISTINCT food_category FROM food_categories
           INNER JOIN  food_link ON food_type = food_categories.food_id
-          WHERE restaurant = $ans[restaurant_id]");
+          WHERE restaurant = $value[restaurant_id]");
     while($row = mysqli_fetch_assoc($result))
     {
        echo("<span class='food'> $row[food_category]</span>");
@@ -55,7 +52,7 @@
 
         $result = mysqli_query($conn, "SELECT DISTINCT venue_name FROM venue_categories
           INNER JOIN  venue_link ON venue_type = venue_categories.venue_id
-          WHERE restaurant = $ans[restaurant_id]");
+          WHERE restaurant = $value[restaurant_id]");
         while($row = mysqli_fetch_assoc($result))
         {
             echo("<span class='venue'> $row[venue_name]</span>");
