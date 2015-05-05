@@ -10,13 +10,17 @@
 			<a href="aboutUs.php">About Us</a>
 		</li>
 		<li>
-			<a href="contactUs.php">Contact Us</a>
+			<ul>
+				<li>
+					<a href="contactUs.php">Contact Us</a>
+				</li>
+				<li>
+					<a href="">Suggestion</a>
+				</li>
+			</ul>
 		</li>
 		<li>
 			<a href="login.php">Login</a>
-		</li>
-		<li>
-			Search
 		</li>
 	</ul>
 </div>
