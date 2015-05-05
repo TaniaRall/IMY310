@@ -1,8 +1,8 @@
 <div id="information">
-	<!--img src="NightSky.jpg" alt="Restaurant Logo" height="150" width="150">
+	<!--img src="NightSky.jpg" alt="Restaurant Logo" height="150" width="150"-->
 	<div id="googleMap">
 		Map goes here
-	</div-->
+	</div>
 	<?php $name = $_GET['Name'];
 
 	 	$result = mysqli_query($conn, "SELECT * FROM restaurants" 
