@@ -1,10 +1,11 @@
-<?php include_once "connection.php" ?>
+<?php require_once "connection.php" ?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style/style.css">
         <script src="script/jquery-1.11.2.min.js"></script>
         <script src="script/script.js" type="text/javascript"></script>
         <title><?php echo($PageTitle) ?></title>
+        <meta charset="utf-8" >
     </head>
     <body>
     <div id="NavBack">
@@ -16,12 +17,15 @@
                 <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="aboutUs.php">About Us</a>
+                <a href="results.php?all=all.php">Browse Restaurants</a>
+            </li>
+            <li>
+                <a href="about.php">About Us</a>
             </li>
             <li>
                 <ul>
                     <li>
-                        <a href="contactUs.php">Contact Us</a>
+                        <a href="contact.php">Contact Us</a>
                     </li>
                     <li>
                         <a href="">Suggestion</a>
@@ -35,18 +39,14 @@
     </div>
 
 <?php
+
 function formatResult($value) {
     echo("<div class='result'>
-            <a href='detailedResultChangePage.php?id=$value[restaurant_id]'>
+            <a href='restaurant-details.php?id=$value[restaurant_id]'>
                 <img class='logo' src='logos/$value[logoPath]' alt='$value[Name] Logo' />
             </a>
-            <div class='rest-name'>
-                $value[Name]
-            </div>
             <div class='address'>
                 $value[address]
             </div>
         </div>");
-    /* <div class="small-details"><span class='label'>Name</span>  echo($value['Name']); ?> <br>
-         <span class='label'>Price-Range</span> echo($value['price_category']); </div>*/
 }?>

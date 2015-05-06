@@ -1,7 +1,7 @@
 *
 {
 	position: relative;
-	margin: 10px;
+	margin: 5px;
 }
 
 ul
@@ -19,27 +19,54 @@ li
 
 #BaconFinder
 {
-	top: 20px;
 	width: 250px;
-	height: 500px;
+    height:600px;
+    display:inline-block;
+    margin: 5px;
 }
 
 #content
 {
-	left: 350px;
-	top: -500px;
-/*	height: 500px;*/
-	width: 500px;
-	border-width: 1px;
-	border-style: solid;
+    height:600px;
+    display:inline-block;
 }
+
+#content form {
+    postion:Absolute;
+    width:70%;
+    top:0;
+}
+
+#restaurant-list {
+    width:350px;
+    height:600px;
+    overflow:auto;
+    display:inline-block;
+    border : 2px solid black;
+
+}
+
+#restaurant-details {
+    width: 900px;
+    height:600px;
+    top: 0px;
+    display:inline-block;
+    border : 2px solid black;
+    overflow:auto;
+}
+
+#details {
+    overflow:hidden;
+}
+
 
 #googleMap
 {
-	width: 200px;
-	height: 200px;
+	width: 350px;
+	height: 350px;
 	border-width: 1px;
 	border-style: solid;
+    overflow:hidden;
 }
 
 #information
@@ -52,11 +79,12 @@ li
 
 .result
 {
-	width: 230px;
-    height: 230px;
+	width: 150px;
+    height: 150px;
 
 	cursor: pointer;
     border: 1px solid black;
+
 }
 
 .memberImage
@@ -116,9 +144,23 @@ content:":"
     width: 300px;
     margin: auto;
     clear: both;
+    display:block;
 }
 
+#google-map, #details {
+    display:inline-block;
+}
+
+
 .logo {
-    width: 80%;
+    max-width: 95%;
+    max-height: 60%;
     margin: auto;
+}
+
+.result {
+    cursor: pointer;
+    display:inline-block;
+    overflow:hidden;
+
 }

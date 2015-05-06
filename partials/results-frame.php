@@ -1,29 +1,23 @@
-<script>
-    $("#restaurant-list").on("click", ".result", function(event) {
-        event.stopPropagation();
-        var target = event.target;
-        var a = $(target).children("a").eq(0).attr("href");
-        var id = a.substring(a.indexOf('?'));
-        $.get("partials/detailedResult" + id, function(data) {
-            $("#restaurant-details").html(data);
-        })
-    })
-</script>
  <?php
-    include_once('connection.php');
+    require_once('connection.php');
+    $result;
+ if ($_GET['all']) {
+     $result = mysqli_query($conn, "SELECT * FROM restaurants
+      INNER JOIN addresses on addresses.restaurant = restaurant_id
+ 	 ORDER BY Name DESC ");
+ } else {
+     $price = $_GET['price'];
+     $foodType = $_GET['food'];
+     $venue = $_GET['venue'];
 
- 	$price = $_GET['price'];
- 	$foodType = $_GET['food'];
- 	$venue = $_GET['venue'];
-
- 	$result = mysqli_query($conn, "SELECT * FROM restaurants
+     $result = mysqli_query($conn, "SELECT * FROM restaurants
  	 INNER JOIN venue_link on venue_link.restaurant = restaurant_id
  	 INNER JOIN food_link on food_link.restaurant = restaurant_id
  	 INNER JOIN addresses on addresses.restaurant = restaurant_id
  	 INNER JOIN prices on price_id = Price
  	 WHERE Price <= $price AND venue_type = $venue AND food_type = $foodType
  	 ORDER BY Price DESC ");
-			?>
+ }?>
      <div id="restaurant-list">
      <?php
         $ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -40,6 +34,5 @@
     <div id="restaurant-details">
 
     </div>
-<?php
-	echo("<input type='button' value='Back' id='back'>");
-?>
+ <br>
+<input type='button' value='Back' id='back'>;

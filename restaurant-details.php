@@ -4,9 +4,10 @@
 ?>
 
 		<div id="BaconFinder">
-			<?php include "partials/baconFinder.php"; ?>
+			<?php include "partials/bacon-finder.php"; ?>
 		</div>
 		<div id="content">
-			<?php include "partials/detailedResult.php"; ?>
+			<?php include "partials/details-frame.php"; ?>
 		</div>
+<input type='button' value='Back' id='backPrev'>
 <?php include "partials/footer.php" ?>
