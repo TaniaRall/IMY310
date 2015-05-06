@@ -1,7 +1,7 @@
-<?php include('head.php'); ?>
+<?php include('partials/head.php'); ?>
 <?php
-/*if($_SESSION['admin'] == true)
-{*/?>
+if($_SESSION['admin'] == true)
+{?>
     <div id="NavBack">
         <ul id="nav">
             <li>
@@ -11,7 +11,7 @@
                 <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="results.php?all=all.php">Browse Restaurants</a>
+                <a href="results.php?all=all">Browse Restaurants</a>
             </li>
             <li>
                 <a href="about.php">About Us</a>
@@ -36,7 +36,7 @@
         </ul>
     </div>
 <?php
-/*}
+}
 else
 { ?>
     <div id="NavBack">
@@ -48,7 +48,7 @@ else
                 <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="results.php?all=all.php">Browse Restaurants</a>
+                <a href="results.php?all=all">Browse Restaurants</a>
             </li>
             <li>
                 <a href="about.php">About Us</a>
@@ -70,18 +70,5 @@ else
     </ul>
 </div>
 <?php 
-}*/
+}
 ?>
-
-<?php
-
-function formatResult($value) {
-    echo("<div class='result'>
-            <a href='restaurant-details.php?id=$value[restaurant_id]'>
-                <img class='logo' src='logos/$value[logoPath]' alt='$value[Name] Logo' />
-            </a>
-            <div class='address'>
-                $value[address]
-            </div>
-        </div>");
-}?>
