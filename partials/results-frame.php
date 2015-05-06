@@ -53,7 +53,6 @@ if (isset($_GET['all']) && $_GET['all']) {
 
 </div>
 <br>
-<input type='button' value='Back' id='back'/>
 
 <!--script type="application/javascript">
     $(function() {

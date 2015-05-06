@@ -51,7 +51,7 @@ body
 	overflow: auto;
 }
 
-#content
+#content, #content2
 {
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
@@ -63,7 +63,6 @@ body
     left: 300px;
 	margin: 2%;	
     display:inline-block;
-	overflow: auto;
 	
 }
 
@@ -110,16 +109,6 @@ body
 	margin-right: auto;
 	overflow: auto;
 }
-
-/*
-#overall
-{
-	height: 700px;
-    width: 1300px;
-	margin-left: auto;
-	margin-right: auto;
-}
-*/
 
 #aboutContent
 {
@@ -393,7 +382,7 @@ content:":"
 	padding: 0.2em 0.5em;
 }
 
-#submitSearch
+#submitSearch, #closeR
 {
 	color: #FFFFFF;
 	background: #aee0fa;

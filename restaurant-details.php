@@ -9,5 +9,5 @@
 		<div id="content">
 			<?php include "partials/details-frame.php"; ?>
 		</div>
-<input type='button' value='Back' id='backPrev'>
+<button type='button' id='back'>Back </button>
 <?php include "partials/footer.php" ?>
