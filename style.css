@@ -1,0 +1,112 @@
+*
+{
+	position: relative;
+	margin: 10px;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li 
+{
+	display: inline;
+	width: 60px;
+}
+
+#BaconFinder
+{
+	top: 20px;
+	width: 250px;
+	height: 500px;
+}
+
+#content
+{
+	left: 350px;
+	top: -500px;
+/*	height: 500px;*/
+	width: 500px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#googleMap
+{
+	width: 200px;
+	height: 200px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#information
+{
+	//width: 200px;
+	//height: 450px;
+	//left: 250px;
+	//top: 0px;//-370px;
+}
+
+.result
+{
+	width: 450px;
+	//height: 100px;
+	cursor: pointer;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+.memberImage
+{
+	width: 100px;
+	height: 100px;
+}
+
+.member
+{
+	top: -120px;
+	left: 130px;
+}
+
+#menuLogo
+{
+	height: 50px;
+}
+
+/*--- DROPDOWN ---*/
+#nav ul{
+   // background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+   // background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+
+#nav ul a{
+    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav li:hover ul{ /* Display the dropdown on hover */
+    left:0; /* Bring back on-screen when needed */
+}
+
+#nav ul li{
+    padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float:none;
+}
+
+#navBack
+{
+	top: -20px;
+}
+
+#navBack ul li img 
+{
+	top: 20px;
+}
+
+
+
