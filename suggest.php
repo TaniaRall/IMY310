@@ -80,6 +80,6 @@
 		</select>
 
 		<br>
-		<input type="submit" value="Submit"/>
+		<input type="submit" value="Submit" id="submitSearch"/>
 	</form>
 </div>

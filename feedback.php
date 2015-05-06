@@ -16,6 +16,6 @@
 		<label for="email" class="mail">Email:</label>
 		<input type="email" name="email" id="email" class="mail"/>
 		<br>
-		<input type="submit" value="Submit"/>
+		<input type="submit" value="Submit" id="submitSearch"/>
 	</form>
 </div>
