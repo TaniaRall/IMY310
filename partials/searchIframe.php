@@ -1,5 +1,5 @@
 <?php require_once('connection.php'); ?>
-<form method="get" action="results.php">
+<form method="get" action="../results.php">
 	<label for="Price">Maximum Price Range</label>
 	<br/>
 	<select id="Price" name="price">

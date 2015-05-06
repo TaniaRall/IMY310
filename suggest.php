@@ -1,6 +1,7 @@
-<link rel="stylesheet" type="text/css" href="style.css">
-<?php include "menu.php"; ?>
-
+<?php
+$PageTitle = "Suggest a restaurant" ;
+include("menu.php");
+?>
 Suggest restuarant:
 <form>
 	<label for="restuarantName">Restaurant Name:</label><br>
@@ -41,3 +42,4 @@ Suggest restuarant:
 	<input type="text" id="restuarantName" name="name" value="Burgundies"/>
 	<br>
 </form>
+<?php include("footer.php") ?>

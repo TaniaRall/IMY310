@@ -1,3 +1,4 @@
+<?php require_once('connection.php'); ?>
 <div id="information">
     <?php $apiKey = "AIzaSyDk9GnS9P2LscHZBJ5AdsgSB_mmQDfTEr8";
     $id = $_GET['id'];
@@ -15,15 +16,16 @@
     ?>
 
     <?php
-
-    echo("<img class='detail-logo' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' />");
-    echo("<iframe id='googleMap' src='$src'></iframe>");
+        echo("<img class='detail-logo' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' />");
+        echo("<iframe id='googleMap' src='$src'></iframe>");
     ?>
     <div class="rest-name"><span class="label">Name</span> <?php echo($value['Name']); ?> </div>
     <div class="dresscode"><span class="label">Dress code</span> <?php echo($value['Dresscode']); ?></div>
+
     <?php if(!empty($value['telephone'])) {?>
         <div class="address"><span class="label">Phone</span>  <?php echo($value['telephone']); ?></div>
     <?php } ?>
+
     <div class="address"><span class="label">Address</span>  <?php echo($value['address']); ?></div>
     <div class="online">
         <?php if(!empty($value['Website'])) echo("<a href='".$value['Website']."'>".$value['Website'] ."</a><br>"); ?>

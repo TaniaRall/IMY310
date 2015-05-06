@@ -1,5 +1,7 @@
-<link rel="stylesheet" type="text/css" href="style.css">
-<?php include "menu.php"; ?>
+<?php
+$PageTitle = "Send us Feedback" ;
+include("menu.php");
+?>
 
 Feedback:
 <form>
@@ -10,3 +12,4 @@ Feedback:
 	<label for="feedback">Feedback</label> <br>
 	<textarea id="feedback" placeholder="Write your feedback here"></textarea><br>
 </form>
+<?php include('footer.php') ?>

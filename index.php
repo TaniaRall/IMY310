@@ -1,10 +1,7 @@
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script src="jquery-1.11.2.min.js"></script>
-		<script src="script.js" type="text/javascript"></script>
-		<?php require_once('connection.php'); ?>
-	</head>
+<?php
+$PageTitle = "Bacon Finder" ;
+include("menu.php");
+?>
 	<body>
 		<?php include "menu.php"; ?>
 		<div id="BaconFinder">
@@ -13,5 +10,4 @@
 		<div id="content">
 			<?php include "searchIframe.php"; ?>
 		</div>
-	</body>
-</html>
+<? include("footer.php") ?>

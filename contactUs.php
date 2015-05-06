@@ -1,5 +1,7 @@
-<link rel="stylesheet" type="text/css" href="style.css">
-<?php include "menu.php"; ?>
+<?php
+    $PageTitle = "Contact us" ;
+    include("menu.php");
+?>
 
 <p>What would you like to contact us about?</p>
 
