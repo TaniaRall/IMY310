@@ -162,5 +162,6 @@ content:":"
     cursor: pointer;
     display:inline-block;
     overflow:hidden;
+    text-align:center;
 
 }
