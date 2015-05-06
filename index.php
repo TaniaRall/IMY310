@@ -15,7 +15,7 @@ include "partials/menu.php";
             Loading...
         </div>
 	</div>
-<? include "partials/footer.php" ?>
+<?php include "partials/footer.php" ?>
 <script>
 $(function() {
     var $content2 = $("#content2");

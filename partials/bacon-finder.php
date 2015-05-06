@@ -1,4 +1,4 @@
-<?php include('head.php'); ?>
+
 <h2>Bacon Finder</h2>
 <p>
 	We created Bacon Finder to help people, who don't yet know Hafield and its surrounding areas, 
