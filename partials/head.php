@@ -1,3 +1,6 @@
+<?php if(!isset($PageTitle)) {
+    $PageTitle = "Bacon Finder";
+} ?>
 <!DOCTYPE html>
 <head>
     <title><?php echo($PageTitle) ?></title>
