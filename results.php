@@ -1,12 +1,11 @@
 <?php
 $PageTitle = "Search Results" ;
-include("menu.php");
+include "partials/menu.php";
 ?>
-		<?php include "menu.php"; ?>
 		<div id="BaconFinder">
-			<?php include "baconFinder.php"; ?>
+			<?php include "partials/baconFinder.php"; ?>
 		</div>
 		<div id="content">
-			<?php include "resultsIframe.php"; ?>
+			<?php include "partials/resultsIframe.php"; ?>
 		</div>
-<?php include('footer.php') ?>
+<?php include "partials/footer.php" ?>

@@ -1,6 +1,6 @@
 <?php
 $PageTitle = "Login" ;
-include("menu.php");
+include "partials/menu.php";
 ?>
 <form id="loginForm">
     <label for="userName">Username:</label>
@@ -14,4 +14,4 @@ include("menu.php");
 
     <input type="submit" value="Submit"/>
 </form>
-<?php include('footer.php') ?>
+<?php include "partials/footer.php" ?>

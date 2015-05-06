@@ -1,6 +1,6 @@
 <?php
 $PageTitle = "About Us";
- include("menu.php");
+ include "partials/menu.php";
 ?>
 <div>
     <img src="images/dummyMember.png" alt="member image" class="memberImage">
@@ -31,4 +31,4 @@ $PageTitle = "About Us";
     </p>
 </div>
 
-<?php include "footer.php" ?>
+<?php include "partials/footer.php" ?>

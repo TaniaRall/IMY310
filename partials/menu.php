@@ -1,27 +1,27 @@
 <?php include_once "connection.php" ?>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="../style/style.css">
-        <script src="../script/jquery-1.11.2.min.js"></script>
-        <script src="../script/script.js" type="text/javascript"></script>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+        <script src="script/jquery-1.11.2.min.js"></script>
+        <script src="script/script.js" type="text/javascript"></script>
         <title><?php echo($PageTitle) ?></title>
     </head>
     <body>
     <div id="NavBack">
         <ul id="nav">
             <li>
-                <img src="../images/logoPlaceholder.jpg" alt="Our Logo" id="menuLogo">
+                <img src="images/logoPlaceholder.jpg" alt="Our Logo" id="menuLogo">
             </li>
             <li>
-                <a href="../index.php">Home</a>
+                <a href="index.php">Home</a>
             </li>
             <li>
-                <a href="../aboutUs.php">About Us</a>
+                <a href="aboutUs.php">About Us</a>
             </li>
             <li>
                 <ul>
                     <li>
-                        <a href="../contactUs.php">Contact Us</a>
+                        <a href="contactUs.php">Contact Us</a>
                     </li>
                     <li>
                         <a href="">Suggestion</a>
@@ -29,7 +29,7 @@
                 </ul>
             </li>
             <li>
-                <a href="../login.php">Login</a>
+                <a href="login.php">Login</a>
             </li>
         </ul>
     </div>
@@ -37,7 +37,7 @@
 <?php
 function formatResult($value) {
     echo("<div class='result'>
-            <a href='../detailedResultChangePage.php?id=$value[restaurant_id]'>
+            <a href='detailedResultChangePage.php?id=$value[restaurant_id]'>
                 <img class='logo' src='logos/$value[logoPath]' alt='$value[Name] Logo' />
             </a>
             <div class='rest-name'>

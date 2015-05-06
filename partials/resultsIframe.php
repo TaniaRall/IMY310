@@ -2,7 +2,11 @@
     $("#restaurant-list").on("click", ".result", function(event) {
         event.stopPropagation();
         var target = event.target;
-        var a = $(target).children()
+        var a = $(target).children("a").eq(0).attr("href");
+        var id = a.substring(a.indexOf('?'));
+        $.get("partials/detailedResult" + id, function(data) {
+            $("#restaurant-details").html(data);
+        })
     })
 </script>
  <?php

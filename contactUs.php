@@ -1,6 +1,6 @@
 <?php
     $PageTitle = "Contact us" ;
-    include("menu.php");
+    include "partials/menu.php";
 ?>
 
 <p>What would you like to contact us about?</p>
@@ -9,3 +9,6 @@
 
 <a href="suggest.php"><button type="button" class="contactButton">Suggest restuarant</button></a>
 
+<?php
+include "partials/footer.php"
+?>

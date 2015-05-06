@@ -1,6 +1,6 @@
 <?php
 $PageTitle = "Suggest a restaurant" ;
-include("menu.php");
+include "partials/menu.php";
 ?>
 Suggest restuarant:
 <form>
@@ -42,4 +42,4 @@ Suggest restuarant:
 	<input type="text" id="restuarantName" name="name" value="Burgundies"/>
 	<br>
 </form>
-<?php include("footer.php") ?>
+<?php include "partials/footer.php" ?>

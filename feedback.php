@@ -1,6 +1,6 @@
 <?php
 $PageTitle = "Send us Feedback" ;
-include("menu.php");
+include "partials/menu.php";
 ?>
 
 Feedback:
@@ -12,4 +12,4 @@ Feedback:
 	<label for="feedback">Feedback</label> <br>
 	<textarea id="feedback" placeholder="Write your feedback here"></textarea><br>
 </form>
-<?php include('footer.php') ?>
+<?php include "partials/footer.php" ?>

@@ -18,7 +18,7 @@
 	<br/>
 	<select id="FoodType" name="food">
 		<?php
-			$result = mysqli_query($conn, "SELECT * FROM food_categories"); 
+			$result = mysqli_query($conn, "SELECT DISTINCT food_id, food_category FROM food_categories INNER JOIN food_link on food_id = food_link.food_type");
 			$ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	
 			foreach ($ans as $key => $value) {
