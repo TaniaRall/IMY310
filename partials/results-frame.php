@@ -1,7 +1,7 @@
  <?php
     require_once('connection.php');
     $result;
- if ($_GET['all']) {
+ if (isset($_GET['all']) && $_GET['all']) {
      $result = mysqli_query($conn, "SELECT * FROM restaurants
       INNER JOIN addresses on addresses.restaurant = restaurant_id
  	 ORDER BY Name DESC ");
@@ -35,4 +35,4 @@
 
     </div>
  <br>
-<input type='button' value='Back' id='back'>;
+<input type='button' value='Back' id='back'/>

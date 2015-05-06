@@ -19,6 +19,7 @@ li
 
 #BaconFinder
 {
+    position: : absolute;
 	width: 250px;
     height:600px;
     display:inline-block;
@@ -27,7 +28,11 @@ li
 
 #content
 {
-    height:600px;
+    position: absolute;
+    height: 400px;
+    width: 800px;
+    top: 60px;
+    left: 300px;
     display:inline-block;
 }
 
@@ -39,7 +44,7 @@ li
 
 #restaurant-list {
     width:350px;
-    height:600px;
+    height:400px;
     overflow:auto;
     display:inline-block;
     border : 2px solid black;
@@ -47,7 +52,8 @@ li
 }
 
 #restaurant-details {
-    width: 900px;
+    position: absolute;
+    width: 400px;
     height:600px;
     top: 0px;
     display:inline-block;
@@ -121,16 +127,7 @@ li
 #nav li:hover ul{ /* Display the dropdown on hover */
     left:0; /* Bring back on-screen when needed */
 }
-#nav li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
-    background:#6b0c36;
-    text-decoration:underline;
-}
-#nav li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
-    text-decoration:none;
-}
-#nav li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
-    background:#333;
-}
+
 
 .label {
     font-weight: bold;
@@ -163,5 +160,14 @@ content:":"
     display:inline-block;
     overflow:hidden;
     text-align:center;
+}
 
+#navBack
+{
+    top: -40px;
+}
+
+#navBack ul li img 
+{
+    top: 40px;
 }

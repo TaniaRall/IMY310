@@ -1,13 +1,7 @@
-<?php require_once "connection.php" ?>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style/style.css">
-        <script src="script/jquery-1.11.2.min.js"></script>
-        <script src="script/script.js" type="text/javascript"></script>
-        <title><?php echo($PageTitle) ?></title>
-        <meta charset="utf-8" >
-    </head>
-    <body>
+<?php include('head.php'); ?>
+<?php
+if($_SESSION['admin'] == true)
+{?>
     <div id="NavBack">
         <ul id="nav">
             <li>
@@ -23,20 +17,61 @@
                 <a href="about.php">About Us</a>
             </li>
             <li>
+                <a href="">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="contact.php">Contact Us</a>
+                        <a href="suggest.php">Suggest Restaurant</a>
                     </li>
                     <li>
-                        <a href="">Suggestion</a>
+                        <a href="feedback.php">Feed Back</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="login.php">Login</a>
+                <a href="admin.php">Admin</a>
+            </li>
+            <li>
+                <a href="logout.php">Logout</a>
             </li>
         </ul>
     </div>
+<?php
+}
+else
+{ ?>
+    <div id="NavBack">
+    <ul id="nav">
+         <li>
+                <img src="images/logoPlaceholder.jpg" alt="Our Logo" id="menuLogo">
+            </li>
+            <li>
+                <a href="index.php">Home</a>
+            </li>
+            <li>
+                <a href="results.php?all=all.php">Browse Restaurants</a>
+            </li>
+            <li>
+                <a href="about.php">About Us</a>
+            </li>
+            <li>
+                <a href="">Contact Us</a>
+                <ul>
+                    <li>
+                        <a href="suggest.php">Suggest Restaurant</a>
+                    </li>
+                    <li>
+                        <a href="feedback.php">Feed Back</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="login.php">Admin Login</a>
+            </li>
+    </ul>
+</div>
+<?php 
+}
+?>
 
 <?php
 

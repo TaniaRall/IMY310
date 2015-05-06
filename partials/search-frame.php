@@ -42,5 +42,5 @@
 	</select>
 	<br/>
 	<br/>
-	<input id="submitSearch" type="submit" vaue="Submit"/>
+	<input id="submitSearch" type="submit" value="Submit"/>
 </form>
