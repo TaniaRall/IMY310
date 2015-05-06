@@ -1,39 +1,126 @@
-*
+/*
 {
 	position: relative;
 	margin: 5px;
+}*/
+
+body
+{
+	/*background-color: black;
+	color: white;*/
+	background-image: url("../images/booth4Back.jpg");
+	/*-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(5px);*/
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 100% 100%;
+	
 }
 
-ul
-{
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
 
-li 
-{
-	display: inline;
-	width: 60px;
+  display: block;
+  
+  
+  width: 100%;
+  /*height: 800px;*/
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
 }
 
 #BaconFinder
 {
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
     position: : absolute;
-	width: 250px;
-    height:600px;
+	width: 20%;
+    height:75%;
     display:inline-block;
-    margin: 5px;
+	margin: 2%;
+	overflow: auto;
 }
 
 #content
 {
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
     position: absolute;
-    height: 400px;
-    width: 800px;
+    height: 75%;
+    width: 70%;
     top: 60px;
     left: 300px;
+	margin: 2%;	
     display:inline-block;
+	overflow: auto;
+	
+}
+
+#suggest
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	height: 85%;
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+#feedback
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	height: 85%;
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
+}
+
+#feedbackText
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	height: 50%;
+    width: 70%;
+}
+
+/*
+#overall
+{
+	height: 700px;
+    width: 1300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+#aboutContent
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	height: 85%;
+    width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;
 }
 
 #content form {
@@ -74,14 +161,14 @@ li
 	border-style: solid;
     overflow:hidden;
 }
-
+/*
 #information
 {
 	//width: 200px;
 	//height: 450px;
 	//left: 250px;
 	//top: 0px;//-370px;
-}
+}*/
 
 .result
 {
@@ -110,24 +197,139 @@ li
 	height: 50px;
 }
 
-#nav ul{
-    background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
-    background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
-    list-style:none;
-    position:absolute;
-    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
-}
-#nav ul li{
-    padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
-    float:none;
-}
-#nav ul a{
-    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
-}
-#nav li:hover ul{ /* Display the dropdown on hover */
-    left:0; /* Bring back on-screen when needed */
+/*Navigation*/
+#nav 
+{
+	background: #244F66;
+	float: left;
+	margin: 0; 
+	/*margin-left:35%;*/
+	padding: 0;
+	border: 1px solid #244F66;
+	border-bottom: none;
+	position:relative;
+	z-index:1000;
+	
 }
 
+#NavBack
+{
+	padding: 0;
+	color: #FFFFFF;
+	background: #aee0fa;
+	background: -moz-linear-gradient(top, black, silver 1px, #7D9DAD 30px);/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left 30, from(#aee0fa), color-stop(10%, silver), to(#7D9DAD));/*chrome + Safari4+*/
+	background: -webkit-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aee0fa', endColorstr='#285870',GradientType=0 ); /* IE6-8 */
+	border-right: 1px solid black;
+	border-left: 1px solid #244F66;
+	border-bottom: 2px solid #244F66;
+	border-top: 1px solid #244F66;
+	float: left;
+	width: 100%;
+}
+
+#nav li a  
+{
+	float: left;
+}
+
+#nav li 
+{
+	float: left;	
+	list-style: none;
+	position: relative;
+}
+
+#nav li a 
+{
+	padding: 0.65em 1em;
+	color: #FFFFFF;
+	background: #aee0fa;
+	background: -moz-linear-gradient(top, black, silver 1px, #7D9DAD 30px);/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left 30, from(#aee0fa), color-stop(10%, silver), to(#7D9DAD));/*chrome + Safari4+*/
+	background: -webkit-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aee0fa', endColorstr='#285870',GradientType=0 ); /* IE6-8 */
+	border-right: 1px solid silver;
+	border-left: 1px solid #244F66;
+	border-bottom: 1px solid #244F66;
+	border-top: 1px solid #244F66;
+	font: 19px white Georgia;	
+}
+
+#nav li a:hover {
+	padding: 0.65em 1em;
+	color: #FFFFFF;
+	background: #A5F2E4;
+	background: -moz-linear-gradient(top, #A5F2E4, silver 1px, #369C89 30px);/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left 30, from(#A5F2E4), color-stop(10%, #2B8776), to(#369C89));/*chrome + Safari4+*/
+	background: -webkit-linear-gradient(top, #A5F2E4 0%,#287063 46%,#287063 50%,#2D7D6E 53%,#2B8776 75%,#43AB98 87%,#369C89 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #A5F2E4 0%,#287063 46%,#287063 50%,#2D7D6E 53%,#2B8776 75%,#43AB98 87%,#369C89 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #A5F2E4 0%,#287063 46%,#287063 50%,#2D7D6E 53%,#2B8776 75%,#43AB98 87%,#369C89 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #A5F2E4 0%,#287063 46%,#287063 50%,#2D7D6E 53%,#2B8776 75%,#43AB98 87%,#369C89 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#A5F2E4', endColorstr='#369C89',GradientType=0 ); /* IE6-8 */
+	border-right: 1px solid silver;
+	border-left: 1px solid #287063;
+	border-bottom: 1px solid #287063;
+	border-top: 1px solid #287063;
+	font: 19px white Georgia;
+}
+
+.hasChildren {
+	position: absolute;
+	width: 5px; height: 5px;
+	background: black;
+	right : 0;
+	bottom: 0;
+}
+
+#nav li ul
+{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	padding: 0; margin: 0;
+}
+
+#nav li:hover > ul 
+{
+	display: block;
+}
+
+#nav li ul li, #nav li ul li a 
+{
+	float: none;
+}
+
+#nav li ul li
+{
+	_display: inline;
+}
+
+#nav li ul li a 
+{
+	width: 150px;
+	display: block;
+}
+
+#nav li ul li ul
+{
+	display: none;
+}
+
+#nav li ul li:hover ul 
+{
+	left: 100%;
+	top: 0;
+}
+/*endOfNav*/
 
 .label {
     font-weight: bold;
@@ -160,14 +362,4 @@ content:":"
     display:inline-block;
     overflow:hidden;
     text-align:center;
-}
-
-#navBack
-{
-    top: -40px;
-}
-
-#navBack ul li img 
-{
-    top: 40px;
 }

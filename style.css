@@ -1,0 +1,78 @@
+*
+{
+	position: relative;
+	margin: 10px;
+}
+
+ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li 
+{
+	display: inline;
+	width: 60px;
+}
+
+#BaconFinder
+{
+	top: 20px;
+	width: 250px;
+	height: 500px;
+}
+
+#content
+{
+	left: 350px;
+	top: -500px;
+/*	height: 500px;*/
+	width: 500px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#googleMap
+{
+	width: 200px;
+	height: 200px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+#information
+{
+	//width: 200px;
+	//height: 450px;
+	//left: 250px;
+	//top: 0px;//-370px;
+}
+
+.result
+{
+	width: 450px;
+	//height: 100px;
+	cursor: pointer;
+	border: 1px;
+	border-color: black;
+	border-style: solid;
+}
+
+.memberImage
+{
+	width: 100px;
+	height: 100px;
+}
+
+.member
+{
+	top: -120px;
+	left: 130px;
+}
+
+#menuLogo
+{
+	height: 50px;
+}

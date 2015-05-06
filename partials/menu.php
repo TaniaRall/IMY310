@@ -1,7 +1,7 @@
 <?php include('head.php'); ?>
 <?php
-if($_SESSION['admin'] == true)
-{?>
+/*if($_SESSION['admin'] == true)
+{*/?>
     <div id="NavBack">
         <ul id="nav">
             <li>
@@ -36,7 +36,7 @@ if($_SESSION['admin'] == true)
         </ul>
     </div>
 <?php
-}
+/*}
 else
 { ?>
     <div id="NavBack">
@@ -70,7 +70,7 @@ else
     </ul>
 </div>
 <?php 
-}
+}*/
 ?>
 
 <?php
