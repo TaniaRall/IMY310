@@ -25,7 +25,7 @@ $(function() {
         $content2.html("Loading");
         $("#content").slideDown();
     }
-
+    <!-- Merging -->
     $content2.hide();
     var button = "<button id='closeR'>Close Results</button>";
     $("#content2").on("click", "#closeR", showSearch);

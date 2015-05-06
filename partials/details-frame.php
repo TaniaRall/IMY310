@@ -1,5 +1,5 @@
 <?php include_once('connection.php'); ?>
-
+<!-- Merging -->
 <?php $apiKey = "AIzaSyDk9GnS9P2LscHZBJ5AdsgSB_mmQDfTEr8";
 $id = $_GET['id'];
 

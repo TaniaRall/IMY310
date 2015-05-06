@@ -6,7 +6,7 @@ include "partials/menu.php";
 			<?php include "partials/bacon-finder.php"; ?>
 		</div>
 		<div id="content">
-            <button id="back">Back</button>
+            <button id="back">Back</button>  
 			<?php include "partials/results-frame.php"; ?>
 		</div>
 <?php include "partials/footer.php" ?>

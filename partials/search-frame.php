@@ -44,3 +44,4 @@
 	<br/>
 	<input id="submitSearch" type="submit" value="Submit"/>
 </form>
+<!-- Merging -->
