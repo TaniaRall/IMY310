@@ -11,10 +11,10 @@ if($_SESSION['admin'] == true)
 			<a href="index.php">Home</a>
 		</li>
 		<li>
-			<a href="about.php">About Us</a>
+			<a href="aboutUs.php">About Us</a>
 		</li>
 		<li>
-			<a href="contact.php">Contact Us</a>
+			<a href="">Contact Us</a>
 			<ul>
 				<li>
 					<a href="suggest.php">Suggest Restaurant</a>
@@ -45,7 +45,7 @@ else
 			<a href="index.php">Home</a>
 		</li>
 		<li>
-			<a href="about.php">About Us</a>
+			<a href="aboutUs.php">About Us</a>
 		</li>
 		<li>
 			<a href="">Contact Us</a>

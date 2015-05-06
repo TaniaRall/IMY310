@@ -3,8 +3,8 @@ $PageTitle = "Bacon Finder" ;
 include "partials/menu.php";
 ?>
 	<body>
-	<div id="overall">
-        <button type='button' id='back'>Back </button>
+	
+        <!--button type='button' id='back'>Back </button-->
 		<div id="BaconFinder">
 			<?php include "partials/bacon-finder.php"; ?>
 		</div>
@@ -14,8 +14,8 @@ include "partials/menu.php";
         <div id="content2">
             Loading...
         </div>
-	</div>
-<?php include "partials/footer.php" ?>
+	
+<? include "partials/footer.php" ?>
 <script>
 $(function() {
     var $content2 = $("#content2");
@@ -25,7 +25,7 @@ $(function() {
         $content2.html("Loading");
         $("#content").slideDown();
     }
-    <!-- Merging -->
+
     $content2.hide();
     var button = "<button id='closeR'>Close Results</button>";
     $("#content2").on("click", "#closeR", showSearch);

@@ -18,5 +18,6 @@
  	." (name, feedback, mail, email) VALUES"
  	." ('".$name."', '".$feedback."', '".$mail."', '".$email."')") or die(mysqli_error($conn)); 
 ?>
-
-Thank you for your feedback.
+<div id="info">
+	<h2 id="infoText">Thank you for your feedback.</h2>
+</div>

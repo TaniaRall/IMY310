@@ -2,8 +2,8 @@
 <?php include ("partials/menu.php"); ?>
 
 <div id="feedback">
-	Feedback:
-	<form method="post" action="saveFeedback.php">
+	<form method="post" action="saveFeedback.php" id="feedbackF">
+		<h2>Feedback:</h2>
 		<label for="name">First name:</label><br>
 		<input type="text" id="name" name="name" value="Anonymous"/>
 		<br>

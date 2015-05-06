@@ -8,7 +8,7 @@
 
 		if(count($ans) == 0)
 		{
-			echo("<p>No new suggestions</p><br/>");
+			echo("<h2>No new suggestions</h2><br/>");
 		}
 
 		foreach ($ans as $value) 

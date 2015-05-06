@@ -35,7 +35,7 @@ if (isset($_GET['all']) && $_GET['all']) {
  	 WHERE Price <= $price AND venue_type = $venue AND food_type = $foodType
  	 ORDER BY Price DESC ");
 }?>
-<!-- Merging -->
+
 <div id="restaurant-list">
     <?php
     $ans = mysqli_fetch_all($result, MYSQLI_ASSOC);

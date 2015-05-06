@@ -1,5 +1,4 @@
 <?php include('partials/head.php'); ?>
-    <!-- Merging -->
 <?php
 if($_SESSION['admin'] == true)
 {?>

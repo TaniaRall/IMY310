@@ -17,6 +17,7 @@ body
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 100% 100%;
+	height: 788px;
 	font: 16px white Georgia;
 }
 
@@ -44,8 +45,8 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	width: 20%;
-    height:75%;
+	width: 20%;/*20%*/
+    height: 648px;/*75%*/
     display:inline-block;
 	margin: 2%;
 	overflow: auto;
@@ -57,13 +58,20 @@ body
 	padding: 10px;
 	border-radius: 20px;
     position: absolute;
-    height: 75%;
+    height: 648px;/*75%;*/
     width: 70%;
-    top: 60px;
-    left: 300px;
+    top: 64px;/*60px*/
+    left: 400px;/*300px*/
 	margin: 2%;	
     display:inline-block;
 	
+}
+
+#sugForm
+{
+	position: relative;
+	top: -30px;
+	margin-left: 40%;
 }
 
 #suggest
@@ -72,9 +80,25 @@ body
 	padding: 10px;
 	border-radius: 20px;
 	height: 85%;
+	position: relative;
+	top: 80px;
     width: 70%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+#log
+{
+	position: relative;
+	top: 200px;
+	margin-left: 35%;		
+}
+
+#feedbackF
+{
+	position: relative;
+	top: 40px;
+	margin-left: 30%;	
 }
 
 #feedback
@@ -82,6 +106,8 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
+	position: relative;
+	top:80px;
 	height: 85%;
     width: 70%;
 	margin-left: auto;
@@ -105,17 +131,26 @@ body
 	border-radius: 20px;
 	height: 85%;
     width: 70%;
+    position: relative;
+    left: -1500px;
+    top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
 }
+
+
 
 #aboutContent
 {
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
+	position: relative;
+	top: 100px;
+	left: -1550px;
 	height: 85%;
+	overflow: auto;
     width: 85%;
 	margin-left: auto;
 	margin-right: auto;
@@ -129,20 +164,23 @@ body
 
 #restaurant-list {
     width:350px;
+    position: relative;
+    left: 20px;/*wasn't*/
     height:400px;
     overflow:auto;
     display:inline-block;
-    border : 2px solid black;
+    /*border : 2px solid black;*/
 
 }
 
 #restaurant-details {
     position: absolute;
-    width: 400px;
+    width: 600px;/*400*/
     height:600px;
     top: 0px;
+    left: 430px; /*wan't*/
     display:inline-block;
-    border : 2px solid black;
+    /*border : 2px solid black;*/
     overflow:auto;
 }
 
@@ -193,6 +231,19 @@ body
 #menuLogo
 {
 	height: 50px;
+}
+
+#loginForm
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+    position: relative;
+    height: 82%;
+    width: 70%;
+    left: 250px;
+	margin: 2%;	
+    display:inline-block;
 }
 
 /*Navigation*/
@@ -338,7 +389,8 @@ content:":"
 }
 
 .detail-logo {
-    width: 300px;
+    width: 200px;/*300*/
+    max-height: 200px;/*wasn't*/
     margin: auto;
     clear: both;
     display:block;
@@ -380,6 +432,32 @@ content:":"
 	font: 19px white Georgia;	
 	border-radius: 10px;
 	padding: 0.2em 0.5em;
+}
+
+#infoText
+{
+	position: relative;
+	margin-left: 35%;
+}
+
+#info
+{
+	background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	position: relative;
+	top:80px;
+	height: 85%;
+    width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#search
+{
+	position: relative;
+	margin-top: 35px;
+	margin-left: 35%;	
 }
 
 #submitSearch, #closeR

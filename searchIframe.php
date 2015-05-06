@@ -1,6 +1,6 @@
-<?php require_once('connection.php'); ?>
-<form method="get" action="results.php" id="search">
-	<label for="Price">Maximum Price Range</label>
+<?php include('head.php'); ?>
+<form method="get" action="results.php">
+	<label for="Price">Price:</label>
 	<br/>
 	<select id="Price" name="price">
 		<?php
@@ -14,11 +14,11 @@
 	</select>
 	<br/>
 	<br/>
-	<label for="FoodType">Food Type</label>
+	<label for="FoodType">Food Type:</label>
 	<br/>
 	<select id="FoodType" name="food">
 		<?php
-			$result = mysqli_query($conn, "SELECT DISTINCT food_id, food_category FROM food_categories INNER JOIN food_link on food_id = food_link.food_type");
+			$result = mysqli_query($conn, "SELECT * FROM food_categories"); 
 			$ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	
 			foreach ($ans as $key => $value) {
@@ -28,7 +28,7 @@
 	</select>
 	<br/>
 	<br/>
-	<label for="Venue">Venue</label>
+	<label for="Venue">Venue:</label>
 	<br/>
 	<select id="Venue" name="venue">
 		<?php
@@ -42,5 +42,5 @@
 	</select>
 	<br/>
 	<br/>
-	<input id="submitSearch" type="submit" value="Submit"/>
-</form>
+	<input id="submitSearch" type="submit" vaue="Submit"/>
+</from>

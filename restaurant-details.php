@@ -11,4 +11,3 @@
 		</div>
 <button type='button' id='back'>Back </button>
 <?php include "partials/footer.php" ?>
-<!-- Merging -->

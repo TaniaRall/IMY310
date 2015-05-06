@@ -22,9 +22,11 @@
 
  	if(!move_uploaded_file($_FILES['logo']['tmp_name'], $target))
  	{
- 		echo"File could not be uploaded";
+ 		/*echo"File could not be uploaded";*/
  	}
 ?>
 <?php include ("partials/menu.php"); ?>
-Thank you for your suggestion.
+<div id="info">
+	<h2 id="infoText">Thank you for your suggestion.</h2>
+</div>
 <!--input type="button" id="back" value="Done"/-->

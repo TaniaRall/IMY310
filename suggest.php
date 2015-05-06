@@ -2,8 +2,8 @@
 <?php include ("partials/menu.php"); ?>
 
 <div id="suggest">
-	Suggest restuarant:
-	<form method="POST" action="suggestRestaurant.php" enctype="multipart/form-data">
+	<form method="POST" action="suggestRestaurant.php" enctype="multipart/form-data" id="sugForm">
+		<h2>Suggest restuarant:</h2>
 		<label for="restuarantName">Restaurant Name:</label><br>
 		<input type="text" id="restuarantName" name="name" value="Burgundies"/>
 		<br>

@@ -1,5 +1,5 @@
 <?php include_once('connection.php'); ?>
-<!-- Merging -->
+
 <?php $apiKey = "AIzaSyDk9GnS9P2LscHZBJ5AdsgSB_mmQDfTEr8";
 $id = $_GET['id'];
 
@@ -15,7 +15,7 @@ $result = mysqli_query($conn, "SELECT * FROM restaurants
 $value = mysqli_fetch_assoc($result);
 $src = "https://www.google.com/maps/embed/v1/place?key=".$apiKey."&q=".urlencode($value["Name"].",". $value['address']);
 
-echo("<img class='detail-logo' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' />");
+echo("<img class='detail-logo' src='logos/".$value['logoPath']."'' alt='Restaurant Logo' /><br>");
 ?>
 
 <?php
