@@ -5,9 +5,6 @@ include "partials/menu.php";
 	<body>
 	
         <!--button type='button' id='back'>Back </button-->
-		<div id="BaconFinder">
-			<?php include "partials/bacon-finder.php"; ?>
-		</div>
 		<div id="content">
 			<?php include "partials/search-frame.php"; ?>
 		</div>

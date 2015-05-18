@@ -5,7 +5,7 @@ if($_SESSION['admin'] == true)
     <div id="NavBack">
         <ul id="nav">
             <li>
-                <img src="images/logoPlaceholder.jpg" alt="Our Logo" id="menuLogo">
+                <img src="images/tempLogo.png" alt="Our Logo" id="menuLogo">
             </li>
             <li>
                 <a href="index.php">Home</a>
@@ -33,6 +33,9 @@ if($_SESSION['admin'] == true)
             <li>
                 <a href="logout.php">Logout</a>
             </li>
+			<li id="help">
+                <a >?</a>
+            </li>
         </ul>
     </div>
 <?php
@@ -42,7 +45,7 @@ else
     <div id="NavBack">
     <ul id="nav">
          <li>
-                <img src="images/logoPlaceholder.jpg" alt="Our Logo" id="menuLogo">
+                <img src="images/tempLogo.png" alt="Our Logo" id="menuLogo">
             </li>
             <li>
                 <a href="index.php">Home</a>
@@ -66,6 +69,9 @@ else
             </li>
             <li>
                 <a href="login.php">Admin Login</a>
+            </li>
+			<li id="help">
+                <a >?</a>
             </li>
     </ul>
 </div>
