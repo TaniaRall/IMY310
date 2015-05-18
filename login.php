@@ -8,11 +8,11 @@
 			<div id="log">
 				<label for="userName">Username:</label>
 				<br/>
-				<input id="userName" name="userName" type="text" value="admin"/>
+				<input id="userName" name="userName" type="text"/>
 				<br/><br/>
 				<label for="password">Password:</label>
 				<br/>
-				<input type="password" name="password" id="password" value="admin"/>
+				<input type="password" name="password" id="password"/>
 				<br/>
 				<br/>
 				<input type="submit" value="Submit" id="submitSearch"/>

@@ -5,11 +5,11 @@
 	<form method="post" action="saveFeedback.php" id="feedbackF">
 		<h2>Feedback:</h2>
 		<label for="name">First name:</label><br>
-		<input type="text" id="name" name="name" value="Anonymous"/>
+		<input type="text" id="name" name="name" value="Anonymous" required/>
 		<br>
 		
 		<label for="feedback">Feedback</label> <br>
-		<textarea id="feedbackText" placeholder="Write your feedback here" name="feedback"></textarea><br>
+		<textarea id="feedbackText" required placeholder="Write your feedback here" name="feedback"></textarea><br>
 		<label for="mail">Contact me:</label>
 		<input type="checkbox" name="mail" id="mail" checked="true"/>
 		<br>

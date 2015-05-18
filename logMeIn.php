@@ -10,9 +10,20 @@
  	if(count($ans) == 1)
  	{
  		$_SESSION['admin'] = true;
+ 		?>
+ 		<script type='text/javascript'>
+			window.location = "index.php";
+		</script>
+		<?php
+ 	}
+ 	else
+ 	{
+ 		?>
+ 		<script type='text/javascript'>
+			alert("Login failed. Please try again.");
+			window.location = "login.php";
+		</script>
+		<?php
  	}
 ?>
 
-<script type='text/javascript'>
-window.location = "index.php";
-</script>

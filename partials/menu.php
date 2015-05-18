@@ -17,13 +17,13 @@ if($_SESSION['admin'] == true)
                 <a href="about.php">About Us</a>
             </li>
             <li>
-                <a href="">Contact Us</a>
+                <a href="feedback.php">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="suggest.php">Suggest Restaurant</a>
+                        <a href="feedback.php">Feed Back</a>
                     </li>
                     <li>
-                        <a href="feedback.php">Feed Back</a>
+                        <a href="suggest.php">Suggest Restaurant</a>
                     </li>
                 </ul>
             </li>
@@ -75,13 +75,13 @@ else
                 <a href="about.php">About Us</a>
             </li>
             <li>
-                <a href="">Contact Us</a>
+                <a href="feedback.php">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="suggest.php">Suggest Restaurant</a>
+                        <a href="feedback.php">Feed Back</a>
                     </li>
                     <li>
-                        <a href="feedback.php">Feed Back</a>
+                        <a href="suggest.php">Suggest Restaurant</a>
                     </li>
                 </ul>
             </li>

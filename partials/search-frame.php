@@ -2,7 +2,9 @@
 <form method="get" action="results.php" id="search">
 	<label for="Price">Maximum Price Range</label>
 	<br/>
-	<select id="Price" name="price">
+	<select id="Price" name="price" required>
+		<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
+		<option value="ANY">Any</option>
 		<?php
 			$result = mysqli_query($conn, "SELECT * FROM prices"); 
 			$ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -16,7 +18,9 @@
 	<br/>
 	<label for="FoodType">Food Type</label>
 	<br/>
-	<select id="FoodType" name="food">
+	<select id="FoodType" name="food" required>
+		<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
+		<option value="ANY">Any</option>
 		<?php
 			$result = mysqli_query($conn, "SELECT DISTINCT food_id, food_category FROM food_categories INNER JOIN food_link on food_id = food_link.food_type");
 			$ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -30,7 +34,9 @@
 	<br/>
 	<label for="Venue">Venue</label>
 	<br/>
-	<select id="Venue" name="venue">
+	<select id="Venue" name="venue" required>
+		<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
+		<option value="ANY">Any</option>
 		<?php
 			$result = mysqli_query($conn, "SELECT * FROM venue_categories"); 
 			$ans = mysqli_fetch_all($result, MYSQLI_ASSOC);

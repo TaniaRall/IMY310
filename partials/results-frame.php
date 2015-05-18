@@ -1,4 +1,3 @@
-<script ></script>
 <?php
 include_once('connection.php');
 
@@ -26,27 +25,66 @@ if (isset($_GET['all']) && $_GET['all']) {
     $price = $_GET['price'];
     $foodType = $_GET['food'];
     $venue = $_GET['venue'];
+    $prev = false;
 
-    $result = mysqli_query($conn, "SELECT * FROM restaurants
- 	 INNER JOIN venue_link on venue_link.restaurant = restaurant_id
- 	 INNER JOIN food_link on food_link.restaurant = restaurant_id
- 	 INNER JOIN addresses on addresses.restaurant = restaurant_id
- 	 INNER JOIN prices on price_id = Price
- 	 WHERE Price <= $price AND venue_type = $venue AND food_type = $foodType
- 	 ORDER BY Price DESC ");
+    $tempQuery = "SELECT DISTINCT * FROM restaurants ";
+        if ($venue != "ANY") 
+            $tempQuery .= " INNER JOIN venue_link on venue_link.restaurant = restaurant_id";
+        if ($foodType != "ANY")
+            $tempQuery .= " INNER JOIN food_link on food_link.restaurant = restaurant_id";
+        
+        $tempQuery .= " INNER JOIN addresses on addresses.restaurant = restaurant_id
+        INNER JOIN prices on price_id = Price";
+
+    if($price != "ANY")
+    {
+        $tempQuery .= " WHERE Price <= $price";
+        $prev = true;
+    }
+    
+    if($foodType != "ANY")
+    {
+        if($prev)
+        {
+            $tempQuery .= " AND food_type = $foodType";
+        }
+        else
+        {
+            $tempQuery .= " WHERE food_type = $foodType";
+            $prev = true;
+        }
+    }
+
+    if($venue != "ANY")
+    {
+        if($prev)
+        {
+            $tempQuery .= " AND venue_type = $venue";
+        }
+        else
+        {
+            $tempQuery .= " WHERE venue_type = $venue";
+            $prev = true;
+        }
+    }
+
+    $tempQuery .= " ORDER BY Price DESC";
+   // echo ($tempQuery);
+    $result = mysqli_query($conn, $tempQuery);
 }?>
 
 <div id="restaurant-list">
     <?php
-    $ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    echo(mysqli_error($conn));
-    if(count($ans) == 0)
-    {
-        echo("<p>No entries matched your search</p><br/>");
-    }
-    foreach ($ans as $key => $value) {
-        formatResult($value);
-    }
+        $ans = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        echo(mysqli_error($conn));
+        if(count($ans) == 0)
+        {
+            echo("<p>No entries matched your search</p><br/>");
+        }
+
+        foreach ($ans as $key => $value) {
+            formatResult($value);
+        }
     ?>
 </div>
 <div id="restaurant-details">
