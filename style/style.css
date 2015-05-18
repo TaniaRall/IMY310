@@ -251,11 +251,6 @@ body
 	/*float: right;*/
 }
 
-#help li a:hover
-{
-	
-}
-
 /*Navigation*/
 #nav 
 {
@@ -301,7 +296,7 @@ body
 	position: relative;
 }
 
-#nav li a 
+#nav li a ,#help li
 {
 	padding: 0.65em 1em;
 	color: #FFFFFF;
@@ -358,6 +353,12 @@ body
 #nav li:hover > ul 
 {
 	display: block;
+}
+
+#help li
+{
+	right: 200%;
+	width: 210%;
 }
 
 #nav li ul li, #nav li ul li a 
