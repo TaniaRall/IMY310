@@ -1,41 +1,23 @@
--- phpMyAdmin SQL Dump
--- version 4.2.7.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: May 18, 2015 at 03:00 PM
--- Server version: 5.6.20
--- PHP Version: 5.5.15
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- Database: `restaurants`
---
+CREATE DATABASE IF NOT EXISTS `restaurants` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `restaurants`;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `addresses`
---
-
+DROP TABLE IF EXISTS `addresses`;
 CREATE TABLE IF NOT EXISTS `addresses` (
-`address_id` int(11) NOT NULL,
+  `address_id` int(11) NOT NULL AUTO_INCREMENT,
   `restaurant` int(11) NOT NULL,
   `telephone` varchar(12) NOT NULL,
-  `address` text NOT NULL
+  `address` text NOT NULL,
+  PRIMARY KEY (`address_id`),
+  KEY `restaurant` (`restaurant`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COMMENT='A restuarnt with multiple branches is classified only once' AUTO_INCREMENT=20 ;
-
---
--- Dumping data for table `addresses`
---
 
 INSERT INTO `addresses` (`address_id`, `restaurant`, `telephone`, `address`) VALUES
 (1, 1, '012 342 1530', '1066 Burnette St. Hatfield'),
@@ -58,51 +40,13 @@ INSERT INTO `addresses` (`address_id`, `restaurant`, `telephone`, `address`) VAL
 (18, 18, '012 362 4483', 'Unit2 Hatfield Sq, 1119 Burnette St, Hatfield'),
 (19, 19, '012 342 1720', ' 1122 Burnett Street, Hatfield');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE IF NOT EXISTS `admin` (
-  `username` varchar(25) NOT NULL,
-  `password` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`username`, `password`) VALUES
-('admin', 'admin');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `feedback`
---
-
-CREATE TABLE IF NOT EXISTS `feedback` (
-  `name` varchar(50) NOT NULL,
-  `feedback` varchar(500) NOT NULL,
-  `mail` tinyint(1) NOT NULL,
-  `email` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `food_categories`
---
-
+DROP TABLE IF EXISTS `food_categories`;
 CREATE TABLE IF NOT EXISTS `food_categories` (
-`food_id` int(11) NOT NULL,
-  `food_category` varchar(50) NOT NULL
+  `food_id` int(11) NOT NULL AUTO_INCREMENT,
+  `food_category` varchar(50) NOT NULL,
+  PRIMARY KEY (`food_id`),
+  UNIQUE KEY `food_category` (`food_category`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
-
---
--- Dumping data for table `food_categories`
---
 
 INSERT INTO `food_categories` (`food_id`, `food_category`) VALUES
 (9, 'Asian'),
@@ -123,20 +67,13 @@ INSERT INTO `food_categories` (`food_id`, `food_category`) VALUES
 (7, 'Taiwanese'),
 (8, 'Wraps');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `food_link`
---
-
+DROP TABLE IF EXISTS `food_link`;
 CREATE TABLE IF NOT EXISTS `food_link` (
   `restaurant` int(11) NOT NULL,
-  `food_type` int(11) NOT NULL
+  `food_type` int(11) NOT NULL,
+  KEY `restaurant` (`restaurant`),
+  KEY `food_type` (`food_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `food_link`
---
 
 INSERT INTO `food_link` (`restaurant`, `food_type`) VALUES
 (1, 6),
@@ -178,20 +115,12 @@ INSERT INTO `food_link` (`restaurant`, `food_type`) VALUES
 (19, 5),
 (19, 17);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `prices`
---
-
+DROP TABLE IF EXISTS `prices`;
 CREATE TABLE IF NOT EXISTS `prices` (
-`price_id` int(11) NOT NULL,
-  `price_category` varchar(30) NOT NULL
+  `price_id` int(11) NOT NULL AUTO_INCREMENT,
+  `price_category` varchar(30) NOT NULL,
+  PRIMARY KEY (`price_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
-
---
--- Dumping data for table `prices`
---
 
 INSERT INTO `prices` (`price_id`, `price_category`) VALUES
 (1, 'Super Cheap'),
@@ -200,14 +129,9 @@ INSERT INTO `prices` (`price_id`, `price_category`) VALUES
 (4, 'Pricy'),
 (5, 'Big Spender');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `restaurants`
---
-
+DROP TABLE IF EXISTS `restaurants`;
 CREATE TABLE IF NOT EXISTS `restaurants` (
-`restaurant_id` int(11) NOT NULL,
+  `restaurant_id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) NOT NULL,
   `Price` int(11) NOT NULL,
   `Dresscode` varchar(30) NOT NULL,
@@ -215,12 +139,11 @@ CREATE TABLE IF NOT EXISTS `restaurants` (
   `Facebook` varchar(255) NOT NULL,
   `Twitter` varchar(255) NOT NULL,
   `Youtube` varchar(255) NOT NULL,
-  `logoPath` varchar(100) DEFAULT NULL
+  `logoPath` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`restaurant_id`),
+  UNIQUE KEY `Name` (`Name`),
+  KEY `Price` (`Price`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
-
---
--- Dumping data for table `restaurants`
---
 
 INSERT INTO `restaurants` (`restaurant_id`, `Name`, `Price`, `Dresscode`, `Website`, `Facebook`, `Twitter`, `Youtube`, `logoPath`) VALUES
 (1, 'Spur', 3, 'Casual', 'http://www.spur.co.za/', 'https://www.facebook.com/SpurSteakRanches', 'https://twitter.com/SpurRestaurant', 'https://www.youtube.com/user/SpurChannel', 'spur.png'),
@@ -243,69 +166,26 @@ INSERT INTO `restaurants` (`restaurant_id`, `Name`, `Price`, `Dresscode`, `Websi
 (18, 'Barcelos', 2, 'Casual', 'http://www.barcelos.co.za/', 'https://www.facebook.com/BarcelosFlameGrilledChicken', '', '', 'barcelos.png'),
 (19, 'Debonairs', 3, 'Casual', 'https://www.debonairspizza.co.za/', 'https://www.facebook.com/DebonairsPizza', 'https://twitter.com/DebonairsPizza', 'https://www.youtube.com/user/DebonairsPizzaTube', 'debonairs.png');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `suggestions`
---
-
-CREATE TABLE IF NOT EXISTS `suggestions` (
-`id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `telephone` varchar(12) NOT NULL,
-  `venue` text NOT NULL,
-  `food` text NOT NULL,
-  `address` text NOT NULL,
-  `prices` text NOT NULL,
-  `website` text NOT NULL,
-  `facebook` text NOT NULL,
-  `twitter` text NOT NULL,
-  `dresscode` text NOT NULL,
-  `youtube` text NOT NULL,
-  `logo` varchar(100) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
-
---
--- Dumping data for table `suggestions`
---
-
-INSERT INTO `suggestions` (`id`, `name`, `telephone`, `venue`, `food`, `address`, `prices`, `website`, `facebook`, `twitter`, `dresscode`, `youtube`, `logo`) VALUES
-(1, 'Burgundies', '678908754', '3', '4', '4567890', '3', 'Burgundies', 'Burgundies', 'Burgundies', 'Casual', 'Casual', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `venue_categories`
---
-
+DROP TABLE IF EXISTS `venue_categories`;
 CREATE TABLE IF NOT EXISTS `venue_categories` (
-`venue_id` int(11) NOT NULL,
-  `venue_name` varchar(30) NOT NULL
+  `venue_id` int(11) NOT NULL AUTO_INCREMENT,
+  `venue_name` varchar(30) NOT NULL,
+  PRIMARY KEY (`venue_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `venue_categories`
---
 
 INSERT INTO `venue_categories` (`venue_id`, `venue_name`) VALUES
 (1, 'Sit Down'),
 (2, 'Take-Away'),
 (3, 'Delivery');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `venue_link`
---
-
+DROP TABLE IF EXISTS `venue_link`;
 CREATE TABLE IF NOT EXISTS `venue_link` (
   `restaurant` int(11) NOT NULL,
-  `venue_type` int(11) NOT NULL
+  `venue_type` int(11) NOT NULL,
+  PRIMARY KEY (`restaurant`,`venue_type`),
+  KEY `restaurant` (`restaurant`),
+  KEY `venue_type` (`venue_type`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `venue_link`
---
 
 INSERT INTO `venue_link` (`restaurant`, `venue_type`) VALUES
 (1, 1),
@@ -344,121 +224,20 @@ INSERT INTO `venue_link` (`restaurant`, `venue_type`) VALUES
 (19, 2),
 (19, 3);
 
---
--- Indexes for dumped tables
---
 
---
--- Indexes for table `addresses`
---
 ALTER TABLE `addresses`
- ADD PRIMARY KEY (`address_id`), ADD KEY `restaurant` (`restaurant`);
+  ADD CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
---
--- Indexes for table `food_categories`
---
-ALTER TABLE `food_categories`
- ADD PRIMARY KEY (`food_id`), ADD UNIQUE KEY `food_category` (`food_category`);
-
---
--- Indexes for table `food_link`
---
 ALTER TABLE `food_link`
- ADD KEY `restaurant` (`restaurant`), ADD KEY `food_type` (`food_type`);
+  ADD CONSTRAINT `food_link_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `food_link_ibfk_2` FOREIGN KEY (`food_type`) REFERENCES `food_categories` (`food_id`);
 
---
--- Indexes for table `prices`
---
-ALTER TABLE `prices`
- ADD PRIMARY KEY (`price_id`);
-
---
--- Indexes for table `restaurants`
---
 ALTER TABLE `restaurants`
- ADD PRIMARY KEY (`restaurant_id`), ADD UNIQUE KEY `Name` (`Name`), ADD KEY `Price` (`Price`);
+  ADD CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`Price`) REFERENCES `prices` (`price_id`);
 
---
--- Indexes for table `suggestions`
---
-ALTER TABLE `suggestions`
- ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `venue_categories`
---
-ALTER TABLE `venue_categories`
- ADD PRIMARY KEY (`venue_id`);
-
---
--- Indexes for table `venue_link`
---
 ALTER TABLE `venue_link`
- ADD PRIMARY KEY (`restaurant`,`venue_type`), ADD KEY `restaurant` (`restaurant`), ADD KEY `venue_type` (`venue_type`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `addresses`
---
-ALTER TABLE `addresses`
-MODIFY `address_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT for table `food_categories`
---
-ALTER TABLE `food_categories`
-MODIFY `food_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
---
--- AUTO_INCREMENT for table `prices`
---
-ALTER TABLE `prices`
-MODIFY `price_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `restaurants`
---
-ALTER TABLE `restaurants`
-MODIFY `restaurant_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
---
--- AUTO_INCREMENT for table `suggestions`
---
-ALTER TABLE `suggestions`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `venue_categories`
---
-ALTER TABLE `venue_categories`
-MODIFY `venue_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `addresses`
---
-ALTER TABLE `addresses`
-ADD CONSTRAINT `addresses_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `food_link`
---
-ALTER TABLE `food_link`
-ADD CONSTRAINT `food_link_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `food_link_ibfk_2` FOREIGN KEY (`food_type`) REFERENCES `food_categories` (`food_id`);
-
---
--- Constraints for table `restaurants`
---
-ALTER TABLE `restaurants`
-ADD CONSTRAINT `restaurants_ibfk_1` FOREIGN KEY (`Price`) REFERENCES `prices` (`price_id`);
-
---
--- Constraints for table `venue_link`
---
-ALTER TABLE `venue_link`
-ADD CONSTRAINT `venue_link_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `venue_link_ibfk_2` FOREIGN KEY (`venue_type`) REFERENCES `venue_categories` (`venue_id`);
+  ADD CONSTRAINT `venue_link_ibfk_1` FOREIGN KEY (`restaurant`) REFERENCES `restaurants` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `venue_link_ibfk_2` FOREIGN KEY (`venue_type`) REFERENCES `venue_categories` (`venue_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
