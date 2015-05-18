@@ -17,7 +17,7 @@ body
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: 100% 100%;
-	height: 630px;
+	height: 788px;
 	font: 16px white Georgia;
 }
 
@@ -45,11 +45,8 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	width: 20%;
-    height: 75%;
-    position: absolute;
-    left: 0px;
-    top: 64px;
+	width: 20%;/*20%*/
+    height: 648px;/*75%*/
     display:inline-block;
 	margin: 2%;
 	overflow: auto;
@@ -61,8 +58,8 @@ body
 	padding: 10px;
 	border-radius: 20px;
     position: absolute;
-    height: 75%;
-    width: 60%;/*70*/
+    height: 648px;/*75%;*/
+    width: 70%;
     top: 64px;/*60px*/
     left: 400px;/*300px*/
 	margin: 2%;	
@@ -72,10 +69,9 @@ body
 
 #sugForm
 {
-	position: absolute;
-	top: -10px;
+	position: relative;
+	top: -30px;
 	margin-left: 40%;
-	padding-bottom: 40px;
 }
 
 #suggest
@@ -83,14 +79,12 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	height: 85%;/*85*/
+	height: 85%;
 	position: relative;
 	top: 80px;
     width: 70%;
-    left: -85%;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: auto;
 }
 
 #log
@@ -135,37 +129,27 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	height: 80%;/*858*/
+	height: 85%;
     width: 70%;
-    position: absolute;
-    left: 150px;
-    top: 90px;
+    position: relative;
+    left: -1500px;
+    top: 100px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
 }
 
-#adminBack form
-{
-	text-align: center;
 
-}
-
-#adminBack h2
-{
-	text-align: center;
-
-}
 
 #aboutContent
 {
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	position: absolute;
-	left: 100px;
+	position: relative;
 	top: 100px;
-	height: 75%;
+	left: -1550px;
+	height: 85%;
 	overflow: auto;
     width: 85%;
 	margin-left: auto;
@@ -181,7 +165,6 @@ body
 #restaurant-list {
     width:350px;
     position: relative;
-    margin-top: 20px;
     left: 20px;/*wasn't*/
     height:400px;
     overflow:auto;
@@ -192,15 +175,13 @@ body
 
 #restaurant-details {
     position: absolute;
-    width: 400px;/*400*/
-    height:450px;
-    margin-top :20px;
+    width: 600px;/*400*/
+    height:600px;
     top: 0px;
     left: 430px; /*wan't*/
     display:inline-block;
     /*border : 2px solid black;*/
     overflow:auto;
-
 }
 
 #details {
@@ -247,23 +228,22 @@ body
 	left: 130px;
 }
 
-#menuLogo
-{
-	height: 50px;
-}
-
 #loginForm
 {
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-    position: absolute;
-    top: 50px;
+    position: relative;
     height: 82%;
     width: 70%;
-    left: 200px;
+    left: 250px;
 	margin: 2%;	
     display:inline-block;
+}
+
+#menuLogo
+{
+	height: 50px;
 }
 
 /*Navigation*/
@@ -274,18 +254,9 @@ body
 	margin: 0; 
 	/*margin-left:35%;*/
 	padding: 0;
-	border: 1px solid #244F66;
 	border-bottom: none;
 	position:relative;
 	z-index:1000;
-	
-}
-
-#NavBack
-{
-	padding: 0;
-	color: #FFFFFF;
-	background: #aee0fa;
 	background: -moz-linear-gradient(top, black, silver 1px, #7D9DAD 30px);/*FF3.6+*/
 	background: -webkit-gradient(linear, left top, left 30, from(#aee0fa), color-stop(10%, silver), to(#7D9DAD));/*chrome + Safari4+*/
 	background: -webkit-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Chrome10+,Safari5.1+ */
@@ -297,6 +268,13 @@ body
 	border-left: 1px solid #244F66;
 	border-bottom: 2px solid #244F66;
 	border-top: 1px solid #244F66;
+	width: 100%;
+}
+
+#NavBack
+{
+	padding: 0;
+	color: #FFFFFF;
 	float: left;
 	width: 100%;
 }
@@ -329,7 +307,7 @@ body
 	border-left: 1px solid #244F66;
 	border-bottom: 1px solid #244F66;
 	border-top: 1px solid #244F66;
-	font: 20px white Georgia;	
+	font: 19px white Georgia;	
 }
 
 #nav li a:hover {
@@ -347,7 +325,7 @@ body
 	border-left: 1px solid #287063;
 	border-bottom: 1px solid #287063;
 	border-top: 1px solid #287063;
-	font: 20px white Georgia;
+	font: 19px white Georgia;
 }
 
 .hasChildren {
@@ -481,27 +459,6 @@ content:":"
 }
 
 #submitSearch, #closeR
-{
-	color: #FFFFFF;
-	background: #aee0fa;
-	background: -moz-linear-gradient(top, black, silver 1px, #7D9DAD 30px);/*FF3.6+*/
-	background: -webkit-gradient(linear, left top, left 30, from(#aee0fa), color-stop(10%, silver), to(#7D9DAD));/*chrome + Safari4+*/
-	background: -webkit-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aee0fa', endColorstr='#285870',GradientType=0 ); /* IE6-8 */
-	border-right: 1px solid silver;
-	border-left: 1px solid #244F66;
-	border-bottom: 1px solid #244F66;
-	border-top: 1px solid #244F66;
-	font: 19px white Georgia;	
-	border-radius: 10px;
-	padding: 0.2em 0.5em;
-	margin-top: 1%;
-}
-
-.buttons
 {
 	color: #FFFFFF;
 	background: #aee0fa;
