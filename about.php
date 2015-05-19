@@ -21,7 +21,7 @@ $PageTitle = "About Us";
 		<img src="images/Renette.JPG" alt="member image" class="memberImage">
 		<p class="member">
 			 Renette<br/>
-			<q>Its food. Close to you. What more needs to be said?</q>
+			<q>It's food. Close to you. What more needs to be said?</q>
 		</p>
 	</div>
 	<div class="member">

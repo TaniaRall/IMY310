@@ -17,6 +17,11 @@ body
   width: 100%;
 }
 
+.invalid
+{
+	border-color: red;
+}
+
 #BaconFinder
 {
 	background-color: rgba(67,171,152,0.3);
@@ -456,7 +461,7 @@ content:":"
 	margin-left: 35%;	
 }
 
-#submitSearch, #closeR
+#submitSearch, #closeR, .accept, .deny
 {
 	color: #FFFFFF;
 	background: #aee0fa;
