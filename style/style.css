@@ -297,6 +297,11 @@ body
 	font: 19px white Georgia;	
 }
 
+#nav a:link 
+{
+    text-decoration: none;
+}
+
 #nav li a:hover {
 	padding: 0.65em 1em;
 	color: #FFFFFF;
