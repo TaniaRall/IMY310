@@ -10,6 +10,7 @@ function setResultClick() {
         return false;
     });
 }
+
 $(document).ready(function(){
 
 	$("#back").click(function(){window.history.back();});
@@ -22,10 +23,12 @@ $(document).ready(function(){
         if(this.checked)
         {
             $(".mail").show();
+            $("#email").show();
         }
         else
         {
             $('.mail').hide();
+            $("#email").hide();
         }
     });
 

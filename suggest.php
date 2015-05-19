@@ -2,14 +2,14 @@
 <?php include ("partials/menu.php"); ?>
 
 <div id="suggest">
-	<form method="POST" action="suggestRestaurant.php" enctype="multipart/form-data" id="sugForm">
+	<form method="POST" action="suggestRestaurant.php" enctype="multipart/form-data" id="sugForm"  onsubmit="return validate()">
 		<h2>Suggest restuarant:</h2>
 		<label for="restuarantName">Restaurant Name:</label><br>
-		<input type="text" id="restuarantName" name="name" value="" required placeholder="Bravo Pizzeria"/>
+		<input type="text" id="restuarantName" name="name" value="" placeholder="Bravo Pizzeria"/>
 		<br>
 		
 		<label for="address">Restaurant Adress:</label><br>
-		<input type="text" id="address" name="address" value="" required placeholder="1212 South Street, Hatfield, Pretoria"/>
+		<input type="text" id="address" name="address" value="" placeholder="1212 South Street, Hatfield, Pretoria"/>
 		<br>
 		
 		<label for="telephone">Restaurant Telephone:</label><br>
@@ -17,7 +17,7 @@
 		<br>
 		
 		<label for="price">Restaurant Price Class:</label><br>
-		<select id="price" name="price" required>
+		<select id="price" name="price">
 			<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
 			<?php
 				$result = mysqli_query($conn, "SELECT * FROM prices"); 
@@ -31,7 +31,7 @@
 		<br>
 		
 		<label for"dres">Dress code:</label><br>
-		<input type="text" id="dres" name="dres" value="" required placeholder="Casual"/>
+		<input type="text" id="dres" name="dres" value="" placeholder="Casual"/>
 		<br>
 		
 		<label for"logo">Logo:</label><br>
@@ -55,7 +55,7 @@
 		<br>
 		
 		<label for="restuarantFood">Restaurant Food Type:</label><br>
-		<select id="restuarantFood" name="food" required>
+		<select id="restuarantFood" name="food">
 			<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
 			<?php
 				$result = mysqli_query($conn, "SELECT * FROM food_categories"); 
@@ -68,7 +68,7 @@
 		</select>
 		<br>
 		<label for="venue">Venue:</label><br>
-		<select name="venue" required>
+		<select name="venue" id="venue">
 			<option value="invalid" selected="selected" disabled="disabled">Please choose one</option>
 			<?php
 				$result = mysqli_query($conn, "SELECT * FROM venue_categories"); 
@@ -83,3 +83,75 @@
 		<input type="submit" value="Submit" id="submitSearch"/>
 	</form>
 </div>
+
+<script>
+	
+function validate(){
+        event.stopPropagation();
+
+        if($("#restuarantName").val() == "" || $("#address").val() == "" || $("#price").val() == null || $("#dres").val() == "" || $("#restuarantFood").val() == null || $("#venue").val() == null)
+        {
+            alert("Please fill in all the boxes.");
+          
+            if($("#restuarantName").val() == "")
+            {
+                $("#restuarantName").attr("class", "invalid");
+            }
+            else
+            {
+                $("#restuarantName").attr("class", "");
+            }
+
+            if($("#address").val() == "")
+            {
+                $("#address").attr("class", "invalid");
+            }
+            else
+            {
+                $("#address").attr("class", "");
+            }
+
+            if($("#price").val() == null)
+            {
+                $("#price").attr("class", "invalid");
+            }
+            else
+            {
+                $("#price").attr("class", "");
+            }
+
+            if($("#dres").val() == "")
+            {
+                $("#dres").attr("class", "invalid");
+            }
+            else
+            {
+                $("#dres").attr("class", "");
+            }
+
+            if($("#restuarantFood").val() == null)
+            {
+                $("#restuarantFood").attr("class", "invalid");
+            }
+            else
+            {
+                $("#restuarantFood").attr("class", "");
+            }
+
+            if($("#venue").val() == null)
+            {
+                $("#venue").attr("class", "invalid");
+            }
+            else
+            {
+                $("#venue").attr("class", "");
+            }
+        }
+        else
+        {
+            $("#sugForm").submit();
+        }
+        return false;
+    };
+
+</script>
