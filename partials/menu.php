@@ -42,7 +42,6 @@ if($_SESSION['admin'] == true)
 							We created Bacon Finder to help people, who don't yet know Hafield and its surrounding areas, 
 							find a nice place to eat in and around Hatfield.
 						</p>
-						<br/>
 						<h3>
 							How to use Bacon Finder
 						</h3>
