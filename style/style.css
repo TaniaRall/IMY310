@@ -46,10 +46,6 @@ body
 
 #sugForm
 {
-	/*position: absolute;
-	top: -10px;
-	margin-left: 40%;
-	padding-bottom: 40px;*/
 	position: relative;
 	top: -30px;
 	margin-left: 40%;
@@ -57,17 +53,6 @@ body
 
 #suggest
 {
-	/*background-color: rgba(67,171,152,0.3);
-	padding: 10px;
-	border-radius: 20px;
-	height: 85%;/*85*/
-	/*position: relative;
-	top: 80px;
-    width: 70%;
-    left: -85%;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: auto;*/
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
@@ -243,8 +228,9 @@ body
 
 #help
 {
-	margin-left: 40.5%;
-	/*float: right;*/
+	/*margin-left: 40.5%;*/
+	float: right;
+	right: 0%;	
 }
 
 /*Navigation*/
