@@ -5,7 +5,7 @@ if($_SESSION['admin'] == true)
     <div id="NavBack">
         <ul id="nav">
             <li>
-                <img src="images/tempLogo.png" alt="Our Logo" id="menuLogo">
+                <img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo">
             </li>
             <li>
                 <a href="index.php">Home</a>
@@ -17,13 +17,13 @@ if($_SESSION['admin'] == true)
                 <a href="about.php">About Us</a>
             </li>
             <li>
-                <a href="feedback.php">Contact Us</a>
+                <a href="../feedback.php">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="feedback.php">Feed Back</a>
+                        <a href="../feedback.php">Feed Back</a>
                     </li>
                     <li>
-                        <a href="suggest.php">Suggest Restaurant</a>
+                        <a href="../suggest.php">Suggest Restaurant</a>
                     </li>
                 </ul>
             </li>
@@ -63,7 +63,7 @@ else
     <div id="NavBack">
     <ul id="nav">
          <li>
-                <img src="images/tempLogo.png" alt="Our Logo" id="menuLogo">
+                <img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo">
             </li>
             <li>
                 <a href="index.php">Home</a>

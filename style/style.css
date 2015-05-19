@@ -1,22 +1,10 @@
-/*
-{
-	position: relative;
-	margin: 5px;
-}*/
-
 body
 {
-	/*background-color: black;
-	color: white;*/
-	background-image: url("../images/booth4Back.jpg");
-	/*-webkit-filter: blur(5px);
-	-moz-filter: blur(5px);
-	-o-filter: blur(5px);
-	-ms-filter: blur(5px);
-	filter: blur(5px);*/
+	background-color: rgba(67,171,152,0.3);
+	background-image: url("../images/background.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
-	background-size: 100% 100%;
+	background-size: 100% 1090%;
 	font: 16px white Georgia;
 }
 
@@ -25,18 +13,8 @@ body
   left: 0;
   right: 0;
   z-index: 1;
-
-  display: block;
-  
-  
+  display: block;  
   width: 100%;
-  /*height: 800px;*/
-
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
 }
 
 #BaconFinder
@@ -57,10 +35,10 @@ body
 	padding: 10px;
 	border-radius: 20px;
     position: absolute;
-    height: 648px;/*75%;*/
-    width: 70%;
+    height: 75%;
+    width: 80%;/*70*/
     top: 64px;/*60px*/
-    left: 400px;/*300px*/
+    left: 100px;/*300px*/
 	margin: 2%;	
     display:inline-block;
 	
@@ -68,6 +46,10 @@ body
 
 #sugForm
 {
+	/*position: absolute;
+	top: -10px;
+	margin-left: 40%;
+	padding-bottom: 40px;*/
 	position: relative;
 	top: -30px;
 	margin-left: 40%;
@@ -75,6 +57,17 @@ body
 
 #suggest
 {
+	/*background-color: rgba(67,171,152,0.3);
+	padding: 10px;
+	border-radius: 20px;
+	height: 85%;/*85*/
+	/*position: relative;
+	top: 80px;
+    width: 70%;
+    left: -85%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: auto;*/
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
@@ -96,7 +89,7 @@ body
 #feedbackF
 {
 	position: relative;
-	top: 40px;
+	top: -20px;
 	margin-left: 30%;	
 }
 
@@ -128,27 +121,37 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	height: 85%;
+	height: 80%;/*858*/
     width: 70%;
-    position: relative;
-    left: -1500px;
-    top: 100px;
+    position: absolute;
+    left: 150px;
+    top: 90px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: auto;
 }
 
+#adminBack form
+{
+	text-align: center;
 
+}
+
+#adminBack h2
+{
+	text-align: center;
+
+}
 
 #aboutContent
 {
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-	position: relative;
+	position: absolute;
+	left: 100px;
 	top: 100px;
-	left: -1550px;
-	height: 85%;
+	height: 75%;
 	overflow: auto;
     width: 85%;
 	margin-left: auto;
@@ -164,23 +167,23 @@ body
 #restaurant-list {
     width:350px;
     position: relative;
+    margin-top: 20px;
     left: 20px;/*wasn't*/
     height:400px;
     overflow:auto;
     display:inline-block;
-    /*border : 2px solid black;*/
-
 }
 
 #restaurant-details {
     position: absolute;
-    width: 600px;/*400*/
-    height:600px;
+    width: 60%;/*400*/
+    height:450px;
+    margin-top :20px;
     top: 0px;
     left: 430px; /*wan't*/
     display:inline-block;
-    /*border : 2px solid black;*/
     overflow:auto;
+
 }
 
 #details {
@@ -190,35 +193,27 @@ body
 
 #googleMap
 {
-	width: 350px;
+	width: 90%;
 	height: 350px;
 	border-width: 1px;
 	border-style: solid;
     overflow:hidden;
+	margin-left: 5%;
 }
-/*
-#information
-{
-	//width: 200px;
-	//height: 450px;
-	//left: 250px;
-	//top: 0px;//-370px;
-}*/
 
 .result
 {
 	width: 150px;
     height: 150px;
-
 	cursor: pointer;
     border: 1px solid black;
-
 }
 
 .memberImage
 {
 	width: 100px;
 	height: 100px;
+	border-radius: 5px;
 }
 
 .member
@@ -232,10 +227,11 @@ body
 	background-color: rgba(67,171,152,0.3);
 	padding: 10px;
 	border-radius: 20px;
-    position: relative;
+    position: absolute;
+    top: 50px;
     height: 82%;
     width: 70%;
-    left: 250px;
+    left: 200px;
 	margin: 2%;	
     display:inline-block;
 }
@@ -247,7 +243,7 @@ body
 
 #help
 {
-	margin-left: 43%;
+	margin-left: 40.5%;
 	/*float: right;*/
 }
 
@@ -470,6 +466,27 @@ content:":"
 }
 
 #submitSearch, #closeR
+{
+	color: #FFFFFF;
+	background: #aee0fa;
+	background: -moz-linear-gradient(top, black, silver 1px, #7D9DAD 30px);/*FF3.6+*/
+	background: -webkit-gradient(linear, left top, left 30, from(#aee0fa), color-stop(10%, silver), to(#7D9DAD));/*chrome + Safari4+*/
+	background: -webkit-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #aee0fa 0%,#244F66 46%,#244F66 50%,#255169 53%,#355A6E 75%,#466F85 87%,#285870 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aee0fa', endColorstr='#285870',GradientType=0 ); /* IE6-8 */
+	border-right: 1px solid silver;
+	border-left: 1px solid #244F66;
+	border-bottom: 1px solid #244F66;
+	border-top: 1px solid #244F66;
+	font: 19px white Georgia;	
+	border-radius: 10px;
+	padding: 0.2em 0.5em;
+	margin-top: 1%;
+}
+
+.buttons
 {
 	color: #FFFFFF;
 	background: #aee0fa;
