@@ -5,43 +5,43 @@ if($_SESSION['admin'] == true)
     <div id="NavBack">
         <ul id="nav">
             <li>
-                <img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo">
+                <a id="homeLogo1" href="index.php"><img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo"></a>
             </li>
             <li>
-                <a href="index.php">Home</a>
+                <a class="navBtn" href="index.php">Home</a>
             </li>
             <li>
-                <a href="results.php?all=all">Browse Restaurants</a>
+                <a class="navBtn" href="results.php?all=all">Browse Restaurants</a>
             </li>
             <li>
-                <a href="about.php">About Us</a>
+                <a class="navBtn" href="about.php">About Us</a>
             </li>
             <li>
-                <a href="feedback.php">Contact Us</a>
+                <a class="navBtn" href="feedback.php">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="feedback.php">Feed Back</a>
+                        <a class="navBtn" href="feedback.php">Feed Back</a>
                     </li>
                     <li>
-                        <a href="suggest.php">Suggest Restaurant</a>
+                        <a class="navBtn" href="suggest.php">Suggest Restaurant</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="admin.php">Admin</a>
+                <a class="navBtn" href="admin.php">Admin</a>
             </li>
             <li>
-                <a href="logout.php">Logout</a>
+                <a class="navBtn" href="logout.php">Logout</a>
             </li>
 			<li id="help">
-                <a >?</a>
+                <a class="navBtn">?</a>
 				<ul>
 					<li>
 						<h2>Bacon Finder</h2>
 						<p>
 							We created Bacon Finder to help people, who don't yet know Hafield and its surrounding areas, 
 							find a nice place to eat in and around Hatfield.
-						</p>
+						</p>						
 						<h3>
 							How to use Bacon Finder
 						</h3>
@@ -62,33 +62,33 @@ else
     <div id="NavBack">
     <ul id="nav">
          <li>
-                <img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo">
+                <a id="homeLogo2" href="index.php"><img src="images/logoMenuOther.png" alt="Our Logo" id="menuLogo"></a>
             </li>
             <li>
-                <a href="index.php">Home</a>
+                <a class="navBtn" href="index.php">Home</a>
             </li>
             <li>
-                <a href="results.php?all=all">Browse Restaurants</a>
+                <a class="navBtn" href="results.php?all=all">Browse Restaurants</a>
             </li>
             <li>
-                <a href="about.php">About Us</a>
+                <a class="navBtn" href="about.php">About Us</a>
             </li>
             <li>
-                <a href="feedback.php">Contact Us</a>
+                <a class="navBtn" href="feedback.php">Contact Us</a>
                 <ul>
                     <li>
-                        <a href="feedback.php">Feed Back</a>
+                        <a class="navBtn" href="feedback.php">Feed Back</a>
                     </li>
                     <li>
-                        <a href="suggest.php">Suggest Restaurant</a>
+                        <a class="navBtn" href="suggest.php">Suggest Restaurant</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="login.php">Admin Login</a>
+                <a class="navBtn" href="login.php">Admin Login</a>
             </li>
 			<li id="help">
-                <a >?</a>
+                <a class="navBtn">?</a>
 				<ul>
 					<li>
 						<h2>Bacon Finder</h2>
