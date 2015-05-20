@@ -12,6 +12,7 @@ function setResultClick() {
         return false;
     });
 }
+var refreshNow = false;
 
 $(function(){
 
@@ -46,6 +47,7 @@ $(function(){
 
 function locationUpdate(event) {
     event.stopPropagation();
+    refreshNow = true;
 
     getLocation();
 
@@ -59,7 +61,17 @@ function getLocation() {
 }
 
 function usePosition(position) {
-    $.get("partials/setLocation.php", {location:position});
+    var callback;
+    if (refreshNow) {
+        refreshNow = false;
+        callback = function() {
+            window.location = window.location;
+        }
+    }  else {
+            callback = function() {}
+        }
+        $.get("partials/setLocation.php", {location:position}, callback);
+
 }
 
 function showError(error) {
