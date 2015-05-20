@@ -65,28 +65,28 @@ function usePosition(position) {
     if (refreshNow) {
         refreshNow = false;
         callback = function() {
-            window.location = window.location;
+            window.location.reload();
         }
-    }  else {
-            callback = function() {}
-        }
-        $.get("partials/setLocation.php", {location:position}, callback);
+    }
+    $.get("partials/setLocation.php", {location:position}, callback);
 
 }
 
 function showError(error) {
+
     switch(error.code) {
         case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation.";
+            console.log("User denied the request for Geolocation.");
             break;
         case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable.";
+            console.log("Location information is unavailable.");
             break;
         case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out.";
+            console.log( "The request to get user location timed out.");
             break;
         case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred.";
+        default :
+            console.log( "An unknown error occurred.");
             break;
     }
 }
