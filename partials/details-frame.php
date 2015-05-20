@@ -31,12 +31,7 @@ echo("<iframe id='googleMap' src='$src'></iframe>");
     <?php } ?>
 
     <div class="address"><span class="label">Address</span>  <?php echo($value['address']); ?></div>
-    <div class="online">
-        <?php if(!empty($value['Website'])) echo("<a href='".$value['Website']."'>".$value['Website'] ."</a><br>"); ?>
-        <?php if(!empty($value['Facebook'])) echo("<a href='".$value['Facebook']."'>".$value['Facebook']."</a><br>"); ?>
-        <?php if(!empty($value['Twitter'])) echo("<a href='".$value['Twitter']."'>".$value['Twitter']."</a><br>"); ?>
-        <?php if(!empty($value['Youtube'])) echo("<a href='".$value['Youtube']."'>".$value['Youtube']."</a><br>"); ?>
-    </div>
+	
     <div class="price"><span class="label">Price Range</span> <?php echo($value['price_category']) ?></div>
 
     <div class="food-types">
@@ -64,6 +59,17 @@ echo("<iframe id='googleMap' src='$src'></iframe>");
             echo("<span class='venue'> $row[venue_name]</span>");
         }
         ?>
+	</div>	
+	
+	<?php if((!empty($value['Website']))||(!empty($value['Facebook']))||(!empty($value['Twitter']))||(!empty($value['Youtube']))) 
+			echo("<span class='label'>Other Details</span>")
+	?>
+    <div class="online">
+        <?php if(!empty($value['Website'])) echo("<a href='".$value['Website']."'>".$value['Website'] ."</a><br>"); ?>
+        <?php if(!empty($value['Facebook'])) echo("<a href='".$value['Facebook']."'>".$value['Facebook']."</a><br>"); ?>
+        <?php if(!empty($value['Twitter'])) echo("<a href='".$value['Twitter']."'>".$value['Twitter']."</a><br>"); ?>
+        <?php if(!empty($value['Youtube'])) echo("<a href='".$value['Youtube']."'>".$value['Youtube']."</a><br>"); ?>
     </div>
+    
 </div>
 
