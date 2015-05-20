@@ -204,7 +204,7 @@ body
 }
 
 .result:hover {
-    overflow:visible;
+    /*height:180px;*/
 }
 
 .memberImage
