@@ -88,7 +88,7 @@
 
 					<br>
 					<input type="submit" value="Accept" class="accept buttons"/>
-					<br>
+					
 					<input type="submit" value="Deny" class="deny buttons"/>
 					<br>
 				</form>
