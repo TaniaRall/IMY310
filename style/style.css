@@ -189,7 +189,6 @@ body
 
 .result
 {
-	margin: 2px;
 	width: 158px;
     height: 158px;
     margin: 1px;
@@ -202,7 +201,8 @@ body
 
 
 .result:hover {
-    /*height:180px;*/
+   /* overflow-y: scroll;*/
+
 }
 
 .adminPending

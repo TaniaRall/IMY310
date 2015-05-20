@@ -20,20 +20,21 @@ echo("<img class='detail-logo' src='logos/".$restaurant['logoPath']."'' alt='Res
 
 <?php
     echo("<iframe id='googleMap' src='$src'></iframe>");
-    if (isset($_SESSION['location'])) {}
-    $coords = $_SESSION['location']['coords'];
-    $origins = "origins=" . $coords['latitude'] . "," . $coords['longitude'];
-    $destinationStrings = "destinations=" .urlencode($restaurant['address']);
+    if (isset($_SESSION['location'])) {
+        $coords = $_SESSION['location']['coords'];
+        $origins = "origins=" . $coords['latitude'] . "," . $coords['longitude'];
+        $destinationStrings = "destinations=" . urlencode($restaurant['address']);
 
-    $url = "https://maps.googleapis.com/maps/api/distancematrix/json?" . $origins . "&" . $destinationStrings;
+        $url = "https://maps.googleapis.com/maps/api/distancematrix/json?" . $origins . "&" . $destinationStrings;
 
-    $matrixRes = json_decode(file_get_contents($url), true);
-    if ($matrixRes['status'] == "OK") {
-        $dist = $matrixRes['rows'][0]['elements'][0];
+        $matrixRes = json_decode(file_get_contents($url), true);
+        if ($matrixRes['status'] == "OK") {
+            $dist = $matrixRes['rows'][0]['elements'][0];
 
-        if ($dist['status'] == "OK") {
-            $restaurant['duration'] = $dist['duration']['text'];
-            $restaurant['distance'] = $dist['distance']['text'];
+            if ($dist['status'] == "OK") {
+                $restaurant['duration'] = $dist['duration']['text'];
+                $restaurant['distance'] = $dist['distance']['text'];
+            }
         }
     }
 ?>

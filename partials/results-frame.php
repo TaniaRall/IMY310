@@ -7,16 +7,16 @@ function formatResult($value)
                     <img class='logo' src='logos/$value[logoPath]' alt='$value[Name] Logo' />
                 </a>
                 <div class='name hidden'>
-                    $value[Name]
-                </div>
-                <div class='address'>
-                    $value[address]
-                </div>";
+                    <strong>$value[Name]</strong><br>";
+
     if (isset($value['distance'])) {
         $dist = $value['distance'];
         $time = $value['duration'];
-        $inside.= "<div>$dist, $time</div>";
+        $inside.= "<em>($dist, $time)</em>";
     }
+    $inside .= " </div> <div class='address'>
+                    $value[address]
+                </div>";
     echo("<div class='result'>$inside
 
 
@@ -143,3 +143,10 @@ if (isset($_GET['all']) && $_GET['all']) {
 
 </div>
 <br>
+<script>
+$(function() {
+<?php if (!isset($_SESSION['location'])) {
+    echo("getLocation();");
+} ?>
+});
+</script>
