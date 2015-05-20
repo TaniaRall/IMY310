@@ -83,4 +83,19 @@ $(function() {
     });
 });
 
+$(function() {
+            getLocation();
+
+            function getLocation() {
+                if (!navigator.geolocation) {
+                    alert("Geolocation is not supported by this browser.");
+                } else {
+                    navigator.geolocation.getCurrentPosition(usePosition);
+                }
+            }
+
+            function usePosition(position) {
+                $.get("partials/setLocation.php", {location:position});
+            }
+        });
 </script>
