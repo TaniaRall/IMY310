@@ -197,6 +197,16 @@ body
 	margin: 2px;
 }
 
+.adminPending
+{
+	border: 1px solid #84ADA3;
+	border-radius: 5px;
+	margin: 2px;
+	padding: 5px;
+	width: 200px;
+	float: left;
+}
+
 .memberImage
 {
 	width: 100px;
