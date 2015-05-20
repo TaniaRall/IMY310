@@ -17,11 +17,6 @@ body
   width: 100%;
 }
 
-.invalid
-{
-	border-color: red;
-}
-
 #BaconFinder
 {
 	background-color: rgba(67,171,152,0.3);
@@ -193,24 +188,16 @@ body
 
 .result
 {
-	width: 158px;
-    height: 158px;
-    margin: 1px;
-    padding: 1px;
+	width: 150px;
+    height: 150px;
 	cursor: pointer;
     border: 1px solid black;
-    background-color: rgba(255,255,255,0.3);
-    border-radius: 8px;
-}
-
-.result:hover {
-    overflow:visible;
 }
 
 .memberImage
 {
-	max-width: 100px;
-	max-height: 100px;
+	width: 100px;
+	height: 100px;
 	border-radius: 5px;
 }
 
@@ -291,7 +278,17 @@ body
 	position: relative;
 }
 
-#nav li a ,#help li
+#homeLogo1, #homeLogo2
+{
+	padding: 0;
+}
+
+#homeLogo1:hover, #homeLogo2:hover
+{
+	padding: 0;
+}
+
+#nav li .navBtn ,#help li
 {
 	padding: 0.65em 1em;
 	color: #FFFFFF;
@@ -315,7 +312,7 @@ body
     text-decoration: none;
 }
 
-#nav li a:hover {
+#nav li .navBtn:hover {
 	padding: 0.65em 1em;
 	color: #FFFFFF;
 	background: #A5F2E4;
@@ -469,7 +466,7 @@ content:":"
 	margin-left: 35%;	
 }
 
-#submitSearch, #closeR, .accept, .deny
+#submitSearch, #closeR
 {
 	color: #FFFFFF;
 	background: #aee0fa;
@@ -511,12 +508,8 @@ content:":"
 	margin-top: 1%;
 }
 
-.rest-name {
-    text-align: center;
-    font-size: larger;
-    font-weight: bold;
-}
-
-#details {
-    width: 100%;
+.invalid
+{
+	border: 1px solid red;
+	background-color: #F2BFC6;
 }

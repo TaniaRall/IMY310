@@ -4,7 +4,6 @@ function setResultClick() {
         event.stopPropagation();
         var a = $(event.currentTarget).children("a").eq(0).attr("href");
         var id = a.substring(a.indexOf('?'));
-        $("#restaurant-details").html("Loading...");
         $("#restaurant-details").load("partials/details-frame.php" + id ,function() {
             setResultClick();
         });
