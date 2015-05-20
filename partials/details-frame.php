@@ -54,12 +54,7 @@ echo("<img class='detail-logo' src='logos/".$restaurant['logoPath']."'' alt='Res
     <?php } ?>
 
     <div class="address"><span class="label">Address</span>  <?php echo($restaurant['address']); ?></div>
-    <div class="online">
-        <?php if(!empty($restaurant['Website'])) echo("<a href='".$restaurant['Website']."'>".$restaurant['Website'] ."</a><br>"); ?>
-        <?php if(!empty($restaurant['Facebook'])) echo("<a href='".$restaurant['Facebook']."'>".$restaurant['Facebook']."</a><br>"); ?>
-        <?php if(!empty($restaurant['Twitter'])) echo("<a href='".$restaurant['Twitter']."'>".$restaurant['Twitter']."</a><br>"); ?>
-        <?php if(!empty($restaurant['Youtube'])) echo("<a href='".$restaurant['Youtube']."'>".$restaurant['Youtube']."</a><br>"); ?>
-    </div>
+    
     <div class="price"><span class="label">Price Range</span> <?php echo($restaurant['price_category']) ?></div>
 
     <div class="food-types">
@@ -88,5 +83,16 @@ echo("<img class='detail-logo' src='logos/".$restaurant['logoPath']."'' alt='Res
         }
         ?>
     </div>
+	
+	<?php if((!empty($restaurant['Website']))||(!empty($restaurant['Facebook']))||(!empty($restaurant['Twitter']))||(!empty($restaurant['Youtube']))) 
+			echo("<span class='label'>Other Details</span>")
+	?>
+	<div class="online">
+        <?php if(!empty($restaurant['Website'])) echo("<a href='".$restaurant['Website']."'>".$restaurant['Website'] ."</a><br>"); ?>
+        <?php if(!empty($restaurant['Facebook'])) echo("<a href='".$restaurant['Facebook']."'>".$restaurant['Facebook']."</a><br>"); ?>
+        <?php if(!empty($restaurant['Twitter'])) echo("<a href='".$restaurant['Twitter']."'>".$restaurant['Twitter']."</a><br>"); ?>
+        <?php if(!empty($restaurant['Youtube'])) echo("<a href='".$restaurant['Youtube']."'>".$restaurant['Youtube']."</a><br>"); ?>
+    </div>
+	
 </div>
 
