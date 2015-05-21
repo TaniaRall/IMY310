@@ -19,6 +19,7 @@ echo("<img class='detail-logo' src='logos/".$restaurant['logoPath']."'' alt='Res
 ?>
 
 <?php
+    error_reporting(E_ERROR | E_PARSE);
     echo("<iframe id='googleMap' src='$src'></iframe>");
     if (isset($_SESSION['location'])) {
         $coords = $_SESSION['location']['coords'];

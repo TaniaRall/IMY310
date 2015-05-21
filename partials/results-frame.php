@@ -110,6 +110,7 @@ if (isset($_GET['all']) && $_GET['all']) {
                 array_push($destinations, urlencode(str_replace(",", ".", $value['address'])));
 
             }
+            error_reporting(E_ERROR | E_PARSE);
             $coords = $_SESSION['location']['coords'];
             $origins = "origins=" . $coords['latitude'] . "," . $coords['longitude'];
             $destinationStrings = "destinations=" . implode("|", $destinations);
